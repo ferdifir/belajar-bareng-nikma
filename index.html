@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- SEO Meta Tags -->
     <title>
       Bimbel Matematika & IPA SD-SMP | Belajar Bareng Nikma - Banyuwangi
@@ -106,6 +111,18 @@
     </style>
   </head>
   <body class="bg-gray-50">
+    <!-- Loading Spinner -->
+    <div
+      id="loadingSpinner"
+      class="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50"
+    >
+      <div class="text-center">
+        <div
+          class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gold mx-auto"
+        ></div>
+        <p class="mt-4 text-navy font-semibold text-lg">Memuat konten...</p>
+      </div>
+    </div>
     <!-- Sticky Navigation Bar -->
     <nav
       id="navbar"
@@ -139,6 +156,13 @@
               href="#program"
               class="text-navy hover:text-gold transition-colors"
               >Program</a
+            >
+          </li>
+          <li>
+            <a
+              href="#galeri"
+              class="text-navy hover:text-gold transition-colors"
+              >Galeri</a
             >
           </li>
           <li>
@@ -195,6 +219,11 @@
             >
           </li>
           <li>
+            <a href="#galeri" class="block text-navy hover:text-gold py-2"
+              >Galeri</a
+            >
+          </li>
+          <li>
             <a href="#testimoni" class="block text-navy hover:text-gold py-2"
               >Testimoni</a
             >
@@ -243,7 +272,11 @@
           <div
             class="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80 flex items-center justify-center text-navy"
           >
-            <img src="/ilustrasi.png" alt="Ilustrasi Belajar" class="w-full h-full object-cover rounded-xl" />
+              <img
+                src="/assets/images/ilustrasi.png"
+                alt="Ilustrasi Belajar"
+                class="w-full h-full object-cover rounded-xl"
+              />
           </div>
         </div>
       </div>
@@ -265,7 +298,11 @@
             <div
               class="bg-gray-200 border-2 border-dashed rounded-full w-48 h-48 md:w-64 md:h-64 flex items-center justify-center text-navy"
             >
-              <img src="/nikma.png" alt="Foto Kak Nikma" class="rounded-full w-full h-full object-cover" />
+              <img
+                src="/assets/images/nikma.png"
+                alt="Foto Kak Nikma"
+                class="rounded-full w-full h-full object-cover"
+              />
             </div>
           </div>
           <div class="md:w-2/3 animate-fade-in-up delay-200">
@@ -331,6 +368,79 @@
               <li>Konsep Dasar Fisika</li>
               <li>Persiapan Ujian Sekolah/Daerah</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-navy mb-12 animate-fade-in-up"
+        >
+          Galeri Kegiatan Belajar Bareng Nikma
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery Item 1 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-100"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Aktivitas Belajar Interaktif</span>
+            </div>
+          </div>
+          <!-- Gallery Item 2 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-200"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Murid-Murid Bahagia</span>
+            </div>
+          </div>
+          <!-- Gallery Item 3 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-300"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Sesi Belajar Kelompok</span>
+            </div>
+          </div>
+          <!-- Gallery Item 4 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-100"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Penghargaan Prestasi</span>
+            </div>
+          </div>
+          <!-- Gallery Item 5 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-200"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Kegiatan Praktikum IPA</span>
+            </div>
+          </div>
+          <!-- Gallery Item 6 -->
+          <div
+            class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up delay-300"
+          >
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center text-navy"
+            >
+              <span class="text-center p-4">Sesi Evaluasi Mingguan</span>
+            </div>
           </div>
         </div>
       </div>
@@ -413,6 +523,134 @@
     </footer>
 
     <script>
+      // Fetch content from API and update page
+      async function loadContent() {
+        try {
+          const response = await fetch("/api/content");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const content = await response.json();
+
+          // Update Hero Section
+          document.querySelector("#beranda h1").textContent =
+            content.hero.title;
+          document.querySelector("#beranda .text-gold").textContent =
+            content.hero.subtitle;
+          document.querySelector("#beranda .max-w-lg").textContent =
+            content.hero.description;
+          const heroLink = document.querySelector("#beranda .btn-primary");
+          heroLink.href = `https://wa.me/${
+            content.hero.whatsappNumber
+          }?text=${encodeURIComponent(content.hero.whatsappMessage)}`;
+
+          // Update About Section
+          document.querySelector("#tentang h2").textContent =
+            content.about.title;
+          const aboutDescriptions = document.querySelectorAll(
+            "#tentang .md\\:w-2\\/3 p"
+          );
+          aboutDescriptions[0].innerHTML = content.about.description1;
+          aboutDescriptions[1].textContent = content.about.description2;
+          aboutDescriptions[2].textContent = content.about.description3;
+
+          // Update Program Section
+          document.querySelector("#program h2").textContent =
+            content.program.title;
+          // SD Program - using more specific selectors
+          const sdProgramDiv = document.querySelector(
+            "#program .bg-white.p-6.rounded-xl.shadow-md.border-l-4.border-navy"
+          );
+          if (sdProgramDiv) {
+            sdProgramDiv.querySelector("h3").textContent =
+              content.program.sd.title;
+            sdProgramDiv.querySelector("p.text-gray-700").textContent =
+              content.program.sd.description;
+            const sdFeatures = sdProgramDiv.querySelectorAll(".list-disc li");
+            sdFeatures[0].textContent = content.program.sd.features[0];
+            sdFeatures[1].textContent = content.program.sd.features[1];
+            sdFeatures[2].textContent = content.program.sd.features[2];
+          }
+
+          // SMP Program - using more specific selectors
+          const smpProgramDiv = document.querySelector(
+            "#program .bg-white.p-6.rounded-xl.shadow-md.border-l-4.border-gold"
+          );
+          if (smpProgramDiv) {
+            smpProgramDiv.querySelector("h3").textContent =
+              content.program.smp.title;
+            smpProgramDiv.querySelector("p.text-gray-700").textContent =
+              content.program.smp.description;
+            const smpFeatures = smpProgramDiv.querySelectorAll(".list-disc li");
+            smpFeatures[0].textContent = content.program.smp.features[0];
+            smpFeatures[1].textContent = content.program.smp.features[1];
+            smpFeatures[2].textContent = content.program.smp.features[2];
+          }
+
+          // Update Gallery Section
+          document.querySelector("#galeri h2").textContent =
+            content.gallery.title;
+          const galleryItems = document.querySelectorAll(
+            "#galeri .bg-gray-200.border-2.border-dashed"
+          );
+          content.gallery.items.forEach((item, index) => {
+            if (galleryItems[index]) {
+              galleryItems[index].textContent = item.title;
+            }
+          });
+
+          // Update Testimonials Section
+          document.querySelector("#testimoni h2").textContent =
+            content.testimonials.title;
+          const testimonialItems = document.querySelectorAll(
+            "#testimoni .bg-white\\.bg-opacity-10\\.p-6\\.rounded-xl"
+          );
+          content.testimonials.items.forEach((testimonial, index) => {
+            if (testimonialItems[index]) {
+              const pElement =
+                testimonialItems[index].querySelector("p.italic");
+              const authorElement =
+                testimonialItems[index].querySelector("p.font-semibold");
+              if (pElement) pElement.textContent = `"${testimonial.text}"`;
+              if (authorElement)
+                authorElement.textContent = `- ${testimonial.author}`;
+            }
+          });
+
+          // Update Contact Section
+          document.querySelector("#kontak h2").textContent =
+            content.contact.title;
+          document.querySelector("#kontak .text-xl.text-gray-700").textContent =
+            content.contact.description;
+          const serviceAreaElement = document.querySelector(
+            "#kontak .mb-8 .text-lg"
+          );
+          if (serviceAreaElement) {
+            serviceAreaElement.innerHTML = `<span class="font-semibold">Layanan:</span> ${content.contact.serviceArea}`;
+          }
+          const contactLink = document.querySelector("#kontak .btn-primary");
+          contactLink.textContent = content.contact.buttonText;
+          contactLink.href = `https://wa.me/${
+            content.contact.whatsappNumber || content.hero.whatsappNumber
+          }?text=${encodeURIComponent(
+            content.contact.whatsappMessage || content.hero.whatsappMessage
+          )}`;
+
+          // Update Footer
+          document.querySelector("footer p").innerHTML = content.footer.text;
+        } catch (error) {
+          console.error("Error loading content:", error);
+          // Hide spinner even if there's an error
+          document.getElementById("loadingSpinner").style.display = "none";
+        } finally {
+          // Hide the loading spinner after content is loaded (or error occurs)
+          document.getElementById("loadingSpinner").style.display = "none";
+        }
+      }
+
+      // Load content when page loads
+      document.addEventListener("DOMContentLoaded", loadContent);
+
       // Smooth Scrolling
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {

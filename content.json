@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Bimbel Tuntas, Nilai Pintas.",
+    "subtitle": "Bimbingan Matematika \u0026 IPA oleh Sarjana Fisika.",
+    "description": "Bimbingan intensif dan personal untuk siswa SD dan SMP. Ubah kesulitan belajar menjadi prestasi nyata, fokus pada pemahaman konsep dasar.",
+    "whatsappNumber": "6281234567890",
+    "whatsappMessage": "Halo Kak Nikma, saya tertarik dengan bimbel Belajar Bareng Nikma. Saya ingin mendaftar dan mendapatkan sesi perkenalan gratis."
+  },
+  "about": {
+    "title": "Kenalan dengan Kak Nikma",
+    "description1": "Kak Nikma adalah lulusan Sarjana Fisika yang memiliki \u003cspan class='font-semibold text-gold'\u003epassion mendalam dalam mengajar Matematika dan IPA (Fisika/Biologi)\u003c/span\u003e.",
+    "description2": "Dengan metode pengajaran yang sabar, terstruktur, dan fokus pada pemecahan masalah, Kak Nikma membantu membangun kepercayaan diri siswa SD dan SMP dalam belajar.",
+    "description3": "Tujuan utamanya adalah mengubah kesulitan belajar menjadi prestasi nyata melalui pemahaman konsep dasar yang kuat."
+  },
+  "program": {
+    "title": "Program Belajar Bareng Nikma",
+    "sd": {
+      "title": "Program SD (Kelas 4-6)",
+      "description": "Fokus pada Dasar-dasar Matematika dan Sains.",
+      "features": [
+        "Penguatan Calitung (Catur, Literasi, Hitung)",
+        "Pemahaman konsep dasar Matematika",
+        "Latihan soal rutin"
+      ]
+    },
+    "smp": {
+      "title": "Program SMP (Kelas 7-9)",
+      "description": "Fokus pada Matematika dan Fisika.",
+      "features": [
+        "Pemecahan Masalah Aljabar",
+        "Konsep Dasar Fisika",
+        "Persiapan Ujian Sekolah/Daerah"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Galeri Kegiatan Belajar Bareng Nikma",
+    "items": [
+      {
+        "title": "Aktivitas Belajar Interaktif"
+      },
+      {
+        "title": "Murid-Murid Bahagia"
+      },
+      {
+        "title": "Sesi Belajar Kelompok"
+      },
+      {
+        "title": "Penghargaan Prestasi"
+      },
+      {
+        "title": "Kegiatan Praktikum IPA"
+      },
+      {
+        "title": "Sesi Evaluasi Mingguan"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Apa Kata Mereka?",
+    "items": [
+      {
+        "text": "Nilai matematika adik saya naik drastis setelah les di sini. Kak Nikma sabar dan bisa menjelaskan pelajaran dengan cara yang mudah dimengerti.",
+        "author": "Ortu Murid SD"
+      },
+      {
+        "text": "Alhamdulillah, anak saya jadi lebih percaya diri saat ujian karena paham konsepnya. Terima kasih Kak Nikma!",
+        "author": "Ortu Murid SMP"
+      },
+      {
+        "text": "Metode belajarnya seru dan ga bikin bosan. Anak saya malah semangat belajar IPA setiap minggu.",
+        "author": "Ortu Murid SD"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "description": "Siap memulai perjalanan belajar yang menyenangkan dan efektif? Hubungi kami melalui WhatsApp!",
+    "serviceArea": "Online dan Tatap Muka Area Bunder, Banyuwangi",
+    "buttonText": "Hubungi via WhatsApp"
+  },
+  "footer": {
+    "text": "\u0026copy; 2025 Belajar Bareng Nikma. Hak Cipta Dilindungi."
+  }
+}
