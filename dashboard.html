@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -30,22 +32,27 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f8fafc;
         }
+
         .btn-primary {
             background-color: #D4AF37;
             color: #0a2f5a;
             font-weight: 600;
         }
+
         .btn-primary:hover {
             background-color: #b8972d;
         }
+
         .btn-secondary {
             background-color: #0a2f5a;
             color: white;
             font-weight: 600;
         }
+
         .btn-secondary:hover {
             background-color: #082540;
         }
+
         .section-card {
             background-color: white;
             border-radius: 0.5rem;
@@ -53,14 +60,17 @@
             padding: 1.5rem;
             margin-bottom: 1.5rem;
         }
+
         .input-group {
             margin-bottom: 1rem;
         }
+
         .input-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
+
         .input-group input,
         .input-group textarea,
         .input-group select {
@@ -70,10 +80,12 @@
             border-radius: 0.375rem;
             font-family: 'Poppins', sans-serif;
         }
+
         .input-group textarea {
             min-height: 100px;
             resize: vertical;
         }
+
         .gallery-item {
             display: flex;
             justify-content: space-between;
@@ -83,6 +95,39 @@
             border-radius: 0.375rem;
             margin-bottom: 0.5rem;
         }
+
+        /* Responsive styles for gallery items */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .gallery-item .gallery-item-input {
+                margin-bottom: 0.5rem;
+            }
+
+            .gallery-item button {
+                align-self: flex-end;
+                width: auto;
+                max-width: 100%;
+            }
+
+            .gallery-item div.flex {
+                flex-direction: column !important;
+            }
+
+            .gallery-item div.flex input.gallery-item-input {
+                margin-right: 0 !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .gallery-item div.flex button.delete-gallery-item {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+        }
+
         .testimonial-item {
             display: flex;
             justify-content: space-between;
@@ -94,6 +139,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Authentication Modal -->
     <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -101,13 +147,16 @@
             <h2 class="text-2xl font-bold text-navy mb-6 text-center">Login Dashboard</h2>
             <div class="mb-4">
                 <label for="username" class="block text-navy font-semibold mb-2">Username:</label>
-                <input type="text" id="username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                <input type="text" id="username"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
             </div>
             <div class="mb-6">
                 <label for="password" class="block text-navy font-semibold mb-2">Password:</label>
-                <input type="password" id="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                <input type="password" id="password"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
             </div>
-            <button id="loginBtn" class="w-full bg-gold hover:bg-yellow-600 text-navy font-semibold py-3 px-6 rounded-full transition duration-300">
+            <button id="loginBtn"
+                class="w-full bg-gold hover:bg-yellow-600 text-navy font-semibold py-3 px-6 rounded-full transition duration-300">
                 Login
             </button>
         </div>
@@ -133,124 +182,142 @@
                     <!-- Section Hero -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Hero</h2>
-                        
+
                         <div class="input-group">
                             <label for="heroTitle">Judul Utama</label>
-                            <input type="text" id="heroTitle" name="heroTitle" placeholder="Bimbel Tuntas, Nilai Pintas.">
+                            <input type="text" id="heroTitle" name="heroTitle"
+                                placeholder="Bimbel Tuntas, Nilai Pintas.">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="heroSubtitle">Subjudul</label>
-                            <input type="text" id="heroSubtitle" name="heroSubtitle" placeholder="Bimbingan Matematika & IPA oleh Sarjana Fisika.">
+                            <input type="text" id="heroSubtitle" name="heroSubtitle"
+                                placeholder="Bimbingan Matematika & IPA oleh Sarjana Fisika.">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="heroDescription">Deskripsi</label>
-                            <textarea id="heroDescription" name="heroDescription" placeholder="Bimbingan intensif dan personal untuk siswa SD dan SMP. Ubah kesulitan belajar menjadi prestasi nyata, fokus pada pemahaman konsep dasar."></textarea>
+                            <textarea id="heroDescription" name="heroDescription"
+                                placeholder="Bimbingan intensif dan personal untuk siswa SD dan SMP. Ubah kesulitan belajar menjadi prestasi nyata, fokus pada pemahaman konsep dasar."></textarea>
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="whatsappNumber">Nomor WhatsApp</label>
                             <input type="text" id="whatsappNumber" name="whatsappNumber" placeholder="6281234567890">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="whatsappMessage">Pesan WhatsApp Default</label>
-                            <textarea id="whatsappMessage" name="whatsappMessage" placeholder="Halo Kak Nikma, saya tertarik dengan bimbel Belajar Bareng Nikma. Saya ingin mendaftar dan mendapatkan sesi perkenalan gratis."></textarea>
+                            <textarea id="whatsappMessage" name="whatsappMessage"
+                                placeholder="Halo Kak Nikma, saya tertarik dengan bimbel Belajar Bareng Nikma. Saya ingin mendaftar dan mendapatkan sesi perkenalan gratis."></textarea>
                         </div>
                     </div>
 
                     <!-- Section About -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Tentang</h2>
-                        
+
                         <div class="input-group">
                             <label for="aboutTitle">Judul Section</label>
                             <input type="text" id="aboutTitle" name="aboutTitle" placeholder="Kenalan dengan Kak Nikma">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="aboutDescription1">Deskripsi 1</label>
-                            <textarea id="aboutDescription1" name="aboutDescription1" placeholder="Kak Nikma adalah lulusan Sarjana Fisika yang memiliki passion mendalam dalam mengajar Matematika dan IPA (Fisika/Biologi)."></textarea>
+                            <textarea id="aboutDescription1" name="aboutDescription1"
+                                placeholder="Kak Nikma adalah lulusan Sarjana Fisika yang memiliki passion mendalam dalam mengajar Matematika dan IPA (Fisika/Biologi)."></textarea>
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="aboutDescription2">Deskripsi 2</label>
-                            <textarea id="aboutDescription2" name="aboutDescription2" placeholder="Dengan metode pengajaran yang sabar, terstruktur, dan fokus pada pemecahan masalah, Kak Nikma membantu membangun kepercayaan diri siswa SD dan SMP dalam belajar."></textarea>
+                            <textarea id="aboutDescription2" name="aboutDescription2"
+                                placeholder="Dengan metode pengajaran yang sabar, terstruktur, dan fokus pada pemecahan masalah, Kak Nikma membantu membangun kepercayaan diri siswa SD dan SMP dalam belajar."></textarea>
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="aboutDescription3">Deskripsi 3</label>
-                            <textarea id="aboutDescription3" name="aboutDescription3" placeholder="Tujuan utamanya adalah mengubah kesulitan belajar menjadi prestasi nyata melalui pemahaman konsep dasar yang kuat."></textarea>
+                            <textarea id="aboutDescription3" name="aboutDescription3"
+                                placeholder="Tujuan utamanya adalah mengubah kesulitan belajar menjadi prestasi nyata melalui pemahaman konsep dasar yang kuat."></textarea>
                         </div>
                     </div>
 
                     <!-- Section Program -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Program</h2>
-                        
+
                         <div class="input-group">
                             <label for="programTitle">Judul Section</label>
-                            <input type="text" id="programTitle" name="programTitle" placeholder="Program Belajar Bareng Nikma">
+                            <input type="text" id="programTitle" name="programTitle"
+                                placeholder="Program Belajar Bareng Nikma">
                         </div>
-                        
+
                         <!-- Program SD -->
                         <div class="border-t border-gray-200 pt-4 mt-4">
                             <h3 class="font-bold text-lg text-navy mb-2">Program SD</h3>
-                            
+
                             <div class="input-group">
                                 <label for="programSdTitle">Judul Program SD</label>
-                                <input type="text" id="programSdTitle" name="programSdTitle" placeholder="Program SD (Kelas 4-6)">
+                                <input type="text" id="programSdTitle" name="programSdTitle"
+                                    placeholder="Program SD (Kelas 4-6)">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSdDescription">Deskripsi Program SD</label>
-                                <input type="text" id="programSdDescription" name="programSdDescription" placeholder="Fokus pada Dasar-dasar Matematika dan Sains.">
+                                <input type="text" id="programSdDescription" name="programSdDescription"
+                                    placeholder="Fokus pada Dasar-dasar Matematika dan Sains.">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSdFeature1">Fitur 1 Program SD</label>
-                                <input type="text" id="programSdFeature1" name="programSdFeature1" placeholder="Penguatan Calitung (Catur, Literasi, Hitung)">
+                                <input type="text" id="programSdFeature1" name="programSdFeature1"
+                                    placeholder="Penguatan Calitung (Catur, Literasi, Hitung)">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSdFeature2">Fitur 2 Program SD</label>
-                                <input type="text" id="programSdFeature2" name="programSdFeature2" placeholder="Pemahaman konsep dasar Matematika">
+                                <input type="text" id="programSdFeature2" name="programSdFeature2"
+                                    placeholder="Pemahaman konsep dasar Matematika">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSdFeature3">Fitur 3 Program SD</label>
-                                <input type="text" id="programSdFeature3" name="programSdFeature3" placeholder="Latihan soal rutin">
+                                <input type="text" id="programSdFeature3" name="programSdFeature3"
+                                    placeholder="Latihan soal rutin">
                             </div>
                         </div>
-                        
+
                         <!-- Program SMP -->
                         <div class="border-t border-gray-200 pt-4 mt-4">
                             <h3 class="font-bold text-lg text-navy mb-2">Program SMP</h3>
-                            
+
                             <div class="input-group">
                                 <label for="programSmpTitle">Judul Program SMP</label>
-                                <input type="text" id="programSmpTitle" name="programSmpTitle" placeholder="Program SMP (Kelas 7-9)">
+                                <input type="text" id="programSmpTitle" name="programSmpTitle"
+                                    placeholder="Program SMP (Kelas 7-9)">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSmpDescription">Deskripsi Program SMP</label>
-                                <input type="text" id="programSmpDescription" name="programSmpDescription" placeholder="Fokus pada Matematika dan Fisika.">
+                                <input type="text" id="programSmpDescription" name="programSmpDescription"
+                                    placeholder="Fokus pada Matematika dan Fisika.">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSmpFeature1">Fitur 1 Program SMP</label>
-                                <input type="text" id="programSmpFeature1" name="programSmpFeature1" placeholder="Pemecahan Masalah Aljabar">
+                                <input type="text" id="programSmpFeature1" name="programSmpFeature1"
+                                    placeholder="Pemecahan Masalah Aljabar">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSmpFeature2">Fitur 2 Program SMP</label>
-                                <input type="text" id="programSmpFeature2" name="programSmpFeature2" placeholder="Konsep Dasar Fisika">
+                                <input type="text" id="programSmpFeature2" name="programSmpFeature2"
+                                    placeholder="Konsep Dasar Fisika">
                             </div>
-                            
+
                             <div class="input-group">
                                 <label for="programSmpFeature3">Fitur 3 Program SMP</label>
-                                <input type="text" id="programSmpFeature3" name="programSmpFeature3" placeholder="Persiapan Ujian Sekolah/Daerah">
+                                <input type="text" id="programSmpFeature3" name="programSmpFeature3"
+                                    placeholder="Persiapan Ujian Sekolah/Daerah">
                             </div>
                         </div>
                     </div>
@@ -258,75 +325,100 @@
                     <!-- Section Gallery -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Galeri</h2>
-                        
+
                         <div class="input-group">
                             <label for="galleryTitle">Judul Section</label>
-                            <input type="text" id="galleryTitle" name="galleryTitle" placeholder="Galeri Kegiatan Belajar Bareng Nikma">
+                            <input type="text" id="galleryTitle" name="galleryTitle"
+                                placeholder="Galeri Kegiatan Belajar Bareng Nikma">
                         </div>
-                        
+
                         <h3 class="font-bold text-lg text-navy mb-2">Item Galeri</h3>
                         <div id="galleryItemsContainer">
                             <!-- Gallery items will be added dynamically -->
                         </div>
-                        
-                        <button type="button" id="addGalleryItem" class="btn-secondary py-2 px-4 rounded-md">Tambah Item Galeri</button>
+
+                        <!-- <button type="button" id="addGalleryItem" class="btn-secondary py-2 px-4 rounded-md">Tambah Item Galeri</button> -->
+
+                        <!-- Image Upload Section -->
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <h3 class="font-bold text-lg text-navy mb-2">Unggah Gambar Baru</h3>
+                            <div class="input-group">
+                                <label for="imageUpload">Pilih Gambar</label>
+                                <input type="file" id="imageUpload" name="image" accept="image/*"
+                                    class="border border-gray-300 rounded-lg p-2">
+                            </div>
+                            <div class="input-group">
+                                <label for="imageTitle">Judul Gambar</label>
+                                <input type="text" id="imageTitle" name="imageTitle" placeholder="Masukkan judul gambar"
+                                    class="border border-gray-300 rounded-lg p-2">
+                            </div>
+                            <button type="button" id="uploadImageButton" class="btn-primary py-2 px-4 rounded-md">Unggah
+                                Gambar</button>
+                        </div>
                     </div>
 
                     <!-- Section Testimonials -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Testimoni</h2>
-                        
+
                         <div class="input-group">
                             <label for="testimonialTitle">Judul Section</label>
-                            <input type="text" id="testimonialTitle" name="testimonialTitle" placeholder="Apa Kata Mereka?">
+                            <input type="text" id="testimonialTitle" name="testimonialTitle"
+                                placeholder="Apa Kata Mereka?">
                         </div>
-                        
+
                         <h3 class="font-bold text-lg text-navy mb-2">Testimoni</h3>
                         <div id="testimonialItemsContainer">
                             <!-- Testimonial items will be added dynamically -->
                         </div>
-                        
-                        <button type="button" id="addTestimonialItem" class="btn-secondary py-2 px-4 rounded-md">Tambah Testimoni</button>
+
+                        <button type="button" id="addTestimonialItem" class="btn-secondary py-2 px-4 rounded-md">Tambah
+                            Testimoni</button>
                     </div>
 
                     <!-- Section Contact -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Section Kontak</h2>
-                        
+
                         <div class="input-group">
                             <label for="contactTitle">Judul Section</label>
                             <input type="text" id="contactTitle" name="contactTitle" placeholder="Hubungi Kami">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="contactDescription">Deskripsi</label>
-                            <textarea id="contactDescription" name="contactDescription" placeholder="Siap memulai perjalanan belajar yang menyenangkan dan efektif? Hubungi kami melalui WhatsApp!"></textarea>
+                            <textarea id="contactDescription" name="contactDescription"
+                                placeholder="Siap memulai perjalanan belajar yang menyenangkan dan efektif? Hubungi kami melalui WhatsApp!"></textarea>
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="serviceArea">Area Layanan</label>
-                            <input type="text" id="serviceArea" name="serviceArea" placeholder="Online dan Tatap Muka Area Bunder, Banyuwangi">
+                            <input type="text" id="serviceArea" name="serviceArea"
+                                placeholder="Online dan Tatap Muka Area Bunder, Banyuwangi">
                         </div>
-                        
+
                         <div class="input-group">
                             <label for="contactButtonText">Teks Tombol Kontak</label>
-                            <input type="text" id="contactButtonText" name="contactButtonText" placeholder="Hubungi via WhatsApp">
+                            <input type="text" id="contactButtonText" name="contactButtonText"
+                                placeholder="Hubungi via WhatsApp">
                         </div>
                     </div>
 
                     <!-- Section Footer -->
                     <div class="section-card">
                         <h2 class="text-xl font-bold text-navy mb-4">Footer</h2>
-                        
+
                         <div class="input-group">
                             <label for="footerText">Teks Footer</label>
-                            <input type="text" id="footerText" name="footerText" placeholder="© 2025 Belajar Bareng Nikma. Hak Cipta Dilindungi.">
+                            <input type="text" id="footerText" name="footerText"
+                                placeholder="© 2025 Belajar Bareng Nikma. Hak Cipta Dilindungi.">
                         </div>
                     </div>
 
                     <!-- Tombol Simpan -->
                     <div class="flex justify-center mt-8">
-                        <button type="submit" class="btn-primary py-3 px-8 rounded-full text-lg">Simpan Perubahan</button>
+                        <button type="submit" class="btn-primary py-3 px-8 rounded-full text-lg">Simpan
+                            Perubahan</button>
                     </div>
                 </form>
             </div>
@@ -391,15 +483,15 @@
             testimonials: {
                 title: "Apa Kata Mereka?",
                 items: [
-                    { 
+                    {
                         text: "Nilai matematika adik saya naik drastis setelah les di sini. Kak Nikma sabar dan bisa menjelaskan pelajaran dengan cara yang mudah dimengerti.",
                         author: "Ortu Murid SD"
                     },
-                    { 
+                    {
                         text: "Alhamdulillah, anak saya jadi lebih percaya diri saat ujian karena paham konsepnya. Terima kasih Kak Nikma!",
                         author: "Ortu Murid SMP"
                     },
-                    { 
+                    {
                         text: "Metode belajarnya seru dan ga bikin bosan. Anak saya malah semangat belajar IPA setiap minggu.",
                         author: "Ortu Murid SD"
                     }
@@ -441,7 +533,7 @@
         async function authenticate() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            
+
             try {
                 const response = await fetch('/api/authenticate', {
                     method: 'POST',
@@ -450,15 +542,15 @@
                     },
                     body: JSON.stringify({ username, password })
                 });
-                
+
                 if (response.ok) {
                     // Login berhasil
                     document.getElementById('authModal').style.display = 'none';
                     document.getElementById('mainContent').classList.remove('hidden');
-                    
+
                     // Tampilkan pesan sukses
                     showNotification('Login berhasil!', true);
-                    
+
                     // Muat konten setelah login berhasil
                     fetchContentFromAPI();
                 } else {
@@ -479,13 +571,13 @@
             document.getElementById('heroDescription').value = contentData.hero.description;
             document.getElementById('whatsappNumber').value = contentData.hero.whatsappNumber;
             document.getElementById('whatsappMessage').value = contentData.hero.whatsappMessage;
-            
+
             // About section
             document.getElementById('aboutTitle').value = contentData.about.title;
             document.getElementById('aboutDescription1').value = contentData.about.description1;
             document.getElementById('aboutDescription2').value = contentData.about.description2;
             document.getElementById('aboutDescription3').value = contentData.about.description3;
-            
+
             // Program section
             document.getElementById('programTitle').value = contentData.program.title;
             document.getElementById('programSdTitle').value = contentData.program.sd.title;
@@ -498,21 +590,21 @@
             document.getElementById('programSmpFeature1').value = contentData.program.smp.features[0];
             document.getElementById('programSmpFeature2').value = contentData.program.smp.features[1];
             document.getElementById('programSmpFeature3').value = contentData.program.smp.features[2];
-            
+
             // Gallery section
             document.getElementById('galleryTitle').value = contentData.gallery.title;
             renderGalleryItems();
-            
+
             // Testimonials section
             document.getElementById('testimonialTitle').value = contentData.testimonials.title;
             renderTestimonialItems();
-            
+
             // Contact section
             document.getElementById('contactTitle').value = contentData.contact.title;
             document.getElementById('contactDescription').value = contentData.contact.description;
             document.getElementById('serviceArea').value = contentData.contact.serviceArea;
             document.getElementById('contactButtonText').value = contentData.contact.buttonText;
-            
+
             // Footer
             document.getElementById('footerText').value = contentData.footer.text;
         }
@@ -521,27 +613,29 @@
         function renderGalleryItems() {
             const container = document.getElementById('galleryItemsContainer');
             container.innerHTML = '';
-            
+
             contentData.gallery.items.forEach((item, index) => {
                 const galleryItemDiv = document.createElement('div');
                 galleryItemDiv.className = 'gallery-item';
                 galleryItemDiv.innerHTML = `
-                    <input type="text" value="${item.title}" class="gallery-item-input flex-grow mr-2" data-index="${index}" data-type="gallery">
-                    <button type="button" class="btn-secondary py-1 px-3 rounded text-sm delete-gallery-item" data-index="${index}">Hapus</button>
+                    <div class="flex flex-col md:flex-row flex-grow">
+                        <input type="text" value="${item.title}" class="gallery-item-input flex-grow mr-0 md:mr-2 mb-2 md:mb-0" data-index="${index}" data-type="gallery">
+                        <button type="button" class="btn-secondary py-1 px-3 rounded text-sm delete-gallery-item ml-0 md:ml-2 w-full md:w-auto" data-index="${index}">Hapus</button>
+                    </div>
                 `;
                 container.appendChild(galleryItemDiv);
             });
-            
+
             // Tambahkan event listener untuk input dan tombol hapus
             document.querySelectorAll('.gallery-item-input').forEach(input => {
-                input.addEventListener('input', function() {
+                input.addEventListener('input', function () {
                     const index = parseInt(this.getAttribute('data-index'));
                     contentData.gallery.items[index].title = this.value;
                 });
             });
-            
+
             document.querySelectorAll('.delete-gallery-item').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const index = parseInt(this.getAttribute('data-index'));
                     contentData.gallery.items.splice(index, 1);
                     renderGalleryItems();
@@ -553,37 +647,37 @@
         function renderTestimonialItems() {
             const container = document.getElementById('testimonialItemsContainer');
             container.innerHTML = '';
-            
+
             contentData.testimonials.items.forEach((item, index) => {
                 const testimonialItemDiv = document.createElement('div');
                 testimonialItemDiv.className = 'testimonial-item';
                 testimonialItemDiv.innerHTML = `
                     <div class="flex-grow mr-2">
-                        <textarea class="testimonial-text-input w-full mb-2" data-index="${index}" data-type="testimonial">${item.text}</textarea>
+                        <textarea rows="4" class="testimonial-text-input w-full mb-2" data-index="${index}" data-type="testimonial">${item.text}</textarea>
                         <input type="text" value="${item.author}" class="testimonial-author-input w-full" data-index="${index}" data-type="testimonial-author">
                     </div>
                     <button type="button" class="btn-secondary py-1 px-3 rounded text-sm delete-testimonial-item" data-index="${index}">Hapus</button>
                 `;
                 container.appendChild(testimonialItemDiv);
             });
-            
+
             // Tambahkan event listener untuk input dan tombol hapus
             document.querySelectorAll('.testimonial-text-input').forEach(input => {
-                input.addEventListener('input', function() {
+                input.addEventListener('input', function () {
                     const index = parseInt(this.getAttribute('data-index'));
                     contentData.testimonials.items[index].text = this.value;
                 });
             });
-            
+
             document.querySelectorAll('.testimonial-author-input').forEach(input => {
-                input.addEventListener('input', function() {
+                input.addEventListener('input', function () {
                     const index = parseInt(this.getAttribute('data-index'));
                     contentData.testimonials.items[index].author = this.value;
                 });
             });
-            
+
             document.querySelectorAll('.delete-testimonial-item').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const index = parseInt(this.getAttribute('data-index'));
                     contentData.testimonials.items.splice(index, 1);
                     renderTestimonialItems();
@@ -606,14 +700,14 @@
                 // Get username and password from input fields or stored session
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
-                
+
                 const response = await fetch('/api/content', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Basic ${encodeCredentials(username, password)}`
                     }
                 });
-                
+
                 if (!response.ok) {
                     if (response.status === 401) {
                         showNotification('Sesi login telah habis, silakan login kembali.', false);
@@ -640,7 +734,7 @@
                 // Get username and password from input fields or stored session
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
-                
+
                 const response = await fetch('/api/content', {
                     method: 'POST',
                     headers: {
@@ -649,7 +743,7 @@
                     },
                     body: JSON.stringify(contentData)
                 });
-                
+
                 if (!response.ok) {
                     if (response.status === 401) {
                         showNotification('Sesi login telah habis, silakan login kembali.', false);
@@ -670,48 +764,48 @@
         }
 
         // Inisialisasi halaman
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Tambahkan event listener untuk tombol login
             document.getElementById('loginBtn').addEventListener('click', authenticate);
-            
+
             // Cegah pengguna menutup modal dengan klik di luar area modal
-            document.getElementById('authModal').addEventListener('click', function(e) {
+            document.getElementById('authModal').addEventListener('click', function (e) {
                 if (e.target === this) {
                     e.stopPropagation();
                     showNotification('Silakan login terlebih dahulu!', false);
                 }
             });
-            
+
             // Cegah pengguna menutup modal dengan tombol ESC
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') {
                     e.preventDefault();
                     showNotification('Silakan login terlebih dahulu!', false);
                 }
             });
-            
+
             // Tambahkan event listener untuk form hanya setelah login berhasil
-            document.getElementById('contentForm').addEventListener('submit', function(e) {
+            document.getElementById('contentForm').addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Pastikan pengguna sudah login sebelum menyimpan
                 if (document.getElementById('mainContent').classList.contains('hidden')) {
                     showNotification('Silakan login terlebih dahulu!', false);
                     return;
                 }
-                
+
                 // Simpan data dari form ke contentData
                 contentData.hero.title = document.getElementById('heroTitle').value;
                 contentData.hero.subtitle = document.getElementById('heroSubtitle').value;
                 contentData.hero.description = document.getElementById('heroDescription').value;
                 contentData.hero.whatsappNumber = document.getElementById('whatsappNumber').value;
                 contentData.hero.whatsappMessage = document.getElementById('whatsappMessage').value;
-                
+
                 contentData.about.title = document.getElementById('aboutTitle').value;
                 contentData.about.description1 = document.getElementById('aboutDescription1').value;
                 contentData.about.description2 = document.getElementById('aboutDescription2').value;
                 contentData.about.description3 = document.getElementById('aboutDescription3').value;
-                
+
                 contentData.program.title = document.getElementById('programTitle').value;
                 contentData.program.sd.title = document.getElementById('programSdTitle').value;
                 contentData.program.sd.description = document.getElementById('programSdDescription').value;
@@ -727,35 +821,91 @@
                     document.getElementById('programSmpFeature2').value,
                     document.getElementById('programSmpFeature3').value
                 ];
-                
+
                 contentData.gallery.title = document.getElementById('galleryTitle').value;
-                
+
                 contentData.testimonials.title = document.getElementById('testimonialTitle').value;
-                
+
                 contentData.contact.title = document.getElementById('contactTitle').value;
                 contentData.contact.description = document.getElementById('contactDescription').value;
                 contentData.contact.serviceArea = document.getElementById('serviceArea').value;
                 contentData.contact.buttonText = document.getElementById('contactButtonText').value;
-                
+
                 contentData.footer.text = document.getElementById('footerText').value;
-                
+
                 // Simpan ke API
                 saveContentToAPI();
             });
-            
+
             // Tambahkan event listener untuk tombol tambah item galeri
-            document.getElementById('addGalleryItem').addEventListener('click', function() {
-                contentData.gallery.items.push({ title: 'Judul Gambar Baru' });
-                renderGalleryItems();
-            });
-            
+            // document.getElementById('addGalleryItem').addEventListener('click', function() {
+            //     contentData.gallery.items.push({ title: 'Judul Gambar Baru', image: '/uploads/default.jpg' });
+            //     renderGalleryItems();
+            // });
+
             // Tambahkan event listener untuk tombol tambah testimoni
-            document.getElementById('addTestimonialItem').addEventListener('click', function() {
-                contentData.testimonials.items.push({ 
-                    text: 'Testimoni baru dari pelanggan...', 
-                    author: 'Nama Pelanggan' 
+            document.getElementById('addTestimonialItem').addEventListener('click', function () {
+                contentData.testimonials.items.push({
+                    text: 'Testimoni baru dari pelanggan...',
+                    author: 'Nama Pelanggan'
                 });
                 renderTestimonialItems();
+            });
+
+            // Tambahkan event listener untuk tombol upload gambar
+            document.getElementById('uploadImageButton').addEventListener('click', function () {
+                const fileInput = document.getElementById('imageUpload');
+                const imageTitle = document.getElementById('imageTitle').value;
+
+                if (fileInput.files.length === 0) {
+                    showNotification('Silakan pilih gambar terlebih dahulu!', false);
+                    return;
+                }
+
+                const file = fileInput.files[0];
+
+                // Validasi tipe file
+                if (!file.type.match('image.*')) {
+                    showNotification('Silakan pilih file gambar!', false);
+                    return;
+                }
+
+                // Buat FormData untuk mengirim file
+                const formData = new FormData();
+                formData.append('image', file);
+
+                // Kirim permintaan upload
+                fetch('/api/upload-image', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Authorization': `Basic ${encodeCredentials(document.getElementById('username').value, document.getElementById('password').value)}`
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            throw new Error('Upload gagal');
+                        }
+                    })
+                    .then(data => {
+                        // Tambahkan item galeri baru ke contentData
+                        contentData.gallery.items.push({
+                            title: imageTitle || file.name,
+                            image: data.imagePath
+                        });
+                        renderGalleryItems();
+                        showNotification('Gambar berhasil diunggah!', true);
+
+                        // Reset form upload
+                        document.getElementById('imageUpload').value = '';
+                        document.getElementById('imageTitle').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Error uploading image:', error);
+                        showNotification('Gagal mengunggah gambar!', false);
+                    });
             });
         });
     </script>
