@@ -400,7 +400,7 @@ func main() {
 	r.HandleFunc("/dashboard", GetDashboard)
 
 	// Start the server
-	port := ":8083"
+	port := ":8085"
 	fmt.Printf("Server starting on port %s\n", port)
 	log.Fatal(http.ListenAndServe(port, r))
 }
