@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -62,6 +63,7 @@ type GallerySection struct {
 // GalleryItem represents a single gallery item
 type GalleryItem struct {
 	Title string `json:"title"`
+	Image string `json:"image"`  // Path to the image file
 }
 
 // TestimonialsSection represents the testimonials section content
@@ -164,12 +166,12 @@ func InitializeDefaultContent() {
 		Gallery: GallerySection{
 			Title: "Galeri Kegiatan Belajar Bareng Nikma",
 			Items: []GalleryItem{
-				{Title: "Aktivitas Belajar Interaktif"},
-				{Title: "Murid-Murid Bahagia"},
-				{Title: "Sesi Belajar Kelompok"},
-				{Title: "Penghargaan Prestasi"},
-				{Title: "Kegiatan Praktikum IPA"},
-				{Title: "Sesi Evaluasi Mingguan"},
+				{Title: "Aktivitas Belajar Interaktif", Image: "/assets/images/gallery1.jpg"},
+				{Title: "Murid-Murid Bahagia", Image: "/assets/images/gallery2.jpg"},
+				{Title: "Sesi Belajar Kelompok", Image: "/assets/images/gallery3.jpg"},
+				{Title: "Penghargaan Prestasi", Image: "/assets/images/gallery4.jpg"},
+				{Title: "Kegiatan Praktikum IPA", Image: "/assets/images/gallery5.jpg"},
+				{Title: "Sesi Evaluasi Mingguan", Image: "/assets/images/gallery6.jpg"},
 			},
 		},
 		Testimonials: TestimonialsSection{
@@ -259,11 +261,11 @@ func Authenticate(w http.ResponseWriter, r *http.Request) {
 	// Check credentials (hardcoded server-side)
 	if creds.Username == "nikma" && creds.Password == "280200" {
 		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(map[string]interface{}{"success": true})
+		json.NewEncoder(w).Encode(map[string]bool{"success": true})
 	} else {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusUnauthorized)
-		json.NewEncoder(w).Encode(map[string]interface{}{"success": false, "message": "Invalid credentials"})
+		json.NewEncoder(w).Encode(map[string]bool{"success": false})
 	}
 }
 
@@ -362,6 +364,30 @@ func main() {
 		}
 	})
 
+	// Image upload route
+	r.HandleFunc("/api/upload-image", func(w http.ResponseWriter, r *http.Request) {
+		// Handle CORS
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+
+		if r.Method == "OPTIONS" {
+			return
+		}
+
+		// Check authentication
+		if !checkAuth(r) {
+			http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			return
+		}
+
+		if r.Method == "POST" {
+			UploadImage(w, r)
+		} else {
+			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		}
+	})
+
 	// Web routes
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/" {
@@ -377,4 +403,43 @@ func main() {
 	port := ":8083"
 	fmt.Printf("Server starting on port %s\n", port)
 	log.Fatal(http.ListenAndServe(port, r))
+}
+
+// UploadImage handles image uploads
+func UploadImage(w http.ResponseWriter, r *http.Request) {
+	// Maximum upload size of 10 MB
+	r.ParseMultipartForm(10 << 20)
+
+	// Get the file from the request
+	file, handler, err := r.FormFile("image")
+	if err != nil {
+		http.Error(w, "Error retrieving file", http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+
+	// Create uploads directory if it doesn't exist
+	os.MkdirAll("uploads", os.ModePerm)
+	
+	// Create destination file
+	dst, err := os.Create("uploads/" + handler.Filename)
+	if err != nil {
+		http.Error(w, "Error creating file", http.StatusInternalServerError)
+		return
+	}
+	defer dst.Close()
+
+	// Copy uploaded file to destination
+	if _, err := io.Copy(dst, file); err != nil {
+		http.Error(w, "Error saving file", http.StatusInternalServerError)
+		return
+	}
+
+	// Return success response with image path
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]string{
+		"status": "success", 
+		"message": "Image uploaded successfully", 
+		"imagePath": "/uploads/" + handler.Filename,
+	})
 }

@@ -37,22 +37,8 @@
     "title": "Galeri Kegiatan Belajar Bareng Nikma",
     "items": [
       {
-        "title": "Aktivitas Belajar Interaktif"
-      },
-      {
-        "title": "Murid-Murid Bahagia"
-      },
-      {
-        "title": "Sesi Belajar Kelompok"
-      },
-      {
-        "title": "Penghargaan Prestasi"
-      },
-      {
-        "title": "Kegiatan Praktikum IPA"
-      },
-      {
-        "title": "Sesi Evaluasi Mingguan"
+        "title": "Mi Ayam",
+        "image": "/uploads/mieayam.jpg"
       }
     ]
   },
