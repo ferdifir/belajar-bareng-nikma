@@ -259,7 +259,7 @@ func Authenticate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Check credentials (hardcoded server-side)
-	if creds.Username == "nikma" && creds.Password == "280200" {
+	if creds.Username == "nikma" && creds.Password == "250200" {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]bool{"success": true})
 	} else {
