@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"nikma/internal/middleware"
 	"nikma/internal/models"
@@ -113,6 +114,9 @@ func (h *UploadHandler) UploadImage(w http.ResponseWriter, r *http.Request) {
 	}
 	defer file.Close()
 
+	// Sanitize filename: replace spaces with underscores
+	sanitizedFilename := sanitizeFilename(handler.Filename)
+
 	// Create uploads directory if it doesn't exist
 	uploadsDir := h.uploadService.GetUploadsDir()
 	if err := os.MkdirAll(uploadsDir, os.ModePerm); err != nil {
@@ -121,7 +125,7 @@ func (h *UploadHandler) UploadImage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Create destination file
-	destPath := filepath.Join(uploadsDir, handler.Filename)
+	destPath := filepath.Join(uploadsDir, sanitizedFilename)
 	dst, err := os.Create(destPath)
 	if err != nil {
 		http.Error(w, "Error creating file", http.StatusInternalServerError)
@@ -140,8 +144,16 @@ func (h *UploadHandler) UploadImage(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(models.UploadResponse{
 		Status:    "success",
 		Message:   "Image uploaded successfully",
-		ImagePath: "/uploads/" + handler.Filename,
+		ImagePath: "/uploads/" + sanitizedFilename,
 	})
+}
+
+// sanitizeFilename replaces spaces and other problematic characters in filenames
+func sanitizeFilename(filename string) string {
+	// Replace spaces with underscores
+	result := strings.ReplaceAll(filename, " ", "_")
+	// Optionally remove other problematic characters if needed
+	return result
 }
 
 // PageHandler handles page serving requests
