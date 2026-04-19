@@ -35,12 +35,7 @@
   },
   "gallery": {
     "title": "Galeri Kegiatan Belajar Bareng Nikma",
-    "items": [
-      {
-        "title": "Mi Ayam",
-        "image": "/uploads/mieayam.jpg"
-      }
-    ]
+    "items": []
   },
   "testimonials": {
     "title": "Apa Kata Mereka?",

@@ -5,29 +5,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
+
   <!-- Primary Meta Tags -->
   <title>{{.Hero.Title}} | Belajar Bareng Nikma</title>
   <meta name="title" content="{{.Hero.Title}} | Belajar Bareng Nikma" />
   <meta name="description" content="{{.Hero.Description}}" />
-  <meta name="keywords" content="bimbel matematika banyuwangi, bimbel ipa banyuwangi, les privat sd smp, bimbingan belajar bunder, guru fisika banyuwangi, les matematika online, bimbel terdekat, belajar bareng nikma" />
+  <meta name="keywords"
+    content="bimbel matematika banyuwangi, bimbel ipa banyuwangi, les privat sd smp, bimbingan belajar bunder, guru fisika banyuwangi, les matematika online, bimbel terdekat, belajar bareng nikma" />
   <meta name="author" content="Belajar Bareng Nikma" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="language" content="Indonesian" />
   <meta name="geo.region" content="ID-JI" />
   <meta name="geo.placename" content="Banyuwangi" />
   <meta name="theme-color" content="#0a2f5a" />
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://nikma.my.id/" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nikma.my.id/" />
@@ -37,7 +38,7 @@
   <meta property="og:image:alt" content="Belajar Bareng Nikma - Bimbel Matematika dan IPA" />
   <meta property="og:locale" content="id_ID" />
   <meta property="og:site_name" content="Belajar Bareng Nikma" />
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://nikma.my.id/" />
@@ -45,7 +46,7 @@
   <meta name="twitter:description" content="{{.Hero.Description}}" />
   <meta name="twitter:image" content="https://nikma.my.id/assets/images/og-image.jpg" />
   <meta name="twitter:image:alt" content="Belajar Bareng Nikma - Bimbel Matematika dan IPA" />
-  
+
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
@@ -86,7 +87,7 @@
     }
   }
   </script>
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -109,13 +110,14 @@
   <link rel="preconnect" href="https://cdn.tailwindcss.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts (Poppins) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
   <script>
     tailwind.config = {
       theme: {
@@ -143,7 +145,7 @@
       },
     };
   </script>
-  
+
   <style type="text/tailwindcss">
     @layer base {
       body {
@@ -181,43 +183,54 @@
       }
     }
   </style>
-  
+
   <style>
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
     }
-    
+
     ::-webkit-scrollbar-track {
       background: #f1f1f1;
     }
-    
+
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(to bottom, #D4AF37, #0a2f5a);
       border-radius: 5px;
     }
-    
+
     ::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(to bottom, #E5C156, #072240);
     }
-    
+
     /* Smooth reveal animation */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-    
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
     /* Hero pattern background */
     .hero-pattern {
       background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -299,8 +312,8 @@
         <p class="mb-8 max-w-lg delay-300">
           {{.Hero.Description}}
         </p>
-        <a href="https://wa.me/{{.Hero.WhatsappNumber}}?text={{.Hero.WhatsappMessage}}"
-          target="_blank" class="btn-primary inline-block text-navy delay-400">
+        <a href="https://wa.me/{{.Hero.WhatsappNumber}}?text={{.Hero.WhatsappMessage}}" target="_blank"
+          class="btn-primary inline-block text-navy delay-400">
           Daftar Sekarang & Dapatkan Sesi Perkenalan Gratis
         </a>
       </div>
@@ -326,7 +339,8 @@
           <!-- Placeholder Profile Image -->
           <div
             class="bg-gray-200 border-2 border-dashed rounded-full w-48 h-48 md:w-64 md:h-64 flex items-center justify-center text-navy">
-            <img src="/assets/images/nikma_2.png" alt="Foto Kak Nikma" class="rounded-full w-full h-full object-cover" />
+            <img src="/assets/images/nikma_2.png" alt="Foto Kak Nikma"
+              class="rounded-full w-full h-full object-cover" />
           </div>
         </div>
         <div class="md:w-2/3 animate-fade-in-up delay-200">
@@ -381,6 +395,7 @@
     </div>
   </section>
 
+  {{if .Gallery.Items}}
   <!-- Gallery Section -->
   <section id="galeri" class="section-padding bg-white">
     <div class="container mx-auto px-4">
@@ -391,11 +406,7 @@
         {{range .Gallery.Items}}
         <div class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up">
           <div class="relative w-full h-48 bg-gray-200 overflow-hidden">
-            <img 
-              src="{{.Image}}" 
-              alt="{{.Title}}" 
-              class="absolute inset-0 w-full h-full object-cover"
-            />
+            <img src="{{.Image}}" alt="{{.Title}}" class="absolute inset-0 w-full h-full object-cover" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-bold text-sm text-navy">{{.Title}}</h3>
@@ -405,6 +416,7 @@
       </div>
     </div>
   </section>
+  {{end}}
 
   <!-- Testimonial Section -->
   <section id="testimoni" class="section-padding bg-navy text-white">
@@ -439,8 +451,8 @@
           <span class="font-semibold">Layanan:</span> {{.Contact.ServiceArea}}
         </p>
       </div>
-      <a href="https://wa.me/{{.Contact.WhatsappNumber}}?text={{.Contact.WhatsappMessage}}"
-        target="_blank" class="btn-primary inline-block animate-fade-in-up delay-300">
+      <a href="https://wa.me/{{.Contact.WhatsappNumber}}?text={{.Contact.WhatsappMessage}}" target="_blank"
+        class="btn-primary inline-block animate-fade-in-up delay-300">
         {{.Contact.ButtonText}}
       </a>
     </div>
@@ -453,7 +465,7 @@
     </div>
   </footer>
 
-
+  <script>
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
