@@ -18,7 +18,7 @@ func main() {
 	cfg := config.LoadConfig()
 
 	// Initialize repository
-	contentRepo := repository.NewContentRepository(cfg.ContentFile)
+	contentRepo := repository.NewContentRepository(cfg.ContentPath)
 
 	// Initialize services
 	contentService := services.NewContentService(contentRepo)
@@ -32,7 +32,6 @@ func main() {
 	contentHandler := handlers.NewContentHandler(contentService)
 	authHandler := handlers.NewAuthHandler(authService)
 	uploadHandler := handlers.NewUploadHandler(uploadService, authMiddleware)
-	pageHandler := handlers.NewPageHandler()
 
 	// Parse templates
 	indexTemplate, err := template.ParseFiles("index.html")
@@ -96,7 +95,7 @@ func main() {
 	fs = http.FileServer(http.Dir("./uploads"))
 	http.Handle("/uploads/", http.StripPrefix("/uploads/", fs))
 
-	port := cfg.Port
-	fmt.Printf("Server running on http://localhost:%s\n", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	port := cfg.ServerPort
+	fmt.Printf("Server running on http://localhost%s\n", port)
+	log.Fatal(http.ListenAndServe(port, nil))
 }

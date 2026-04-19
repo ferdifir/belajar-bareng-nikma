@@ -4,24 +4,23 @@ import (
 	"encoding/json"
 	"os"
 
-	"nikma/internal/config"
 	"nikma/internal/models"
 )
 
 // ContentRepository handles content data persistence
 type ContentRepository struct {
-	config *config.Config
+	contentPath string
 }
 
 // NewContentRepository creates a new content repository
-func NewContentRepository(cfg *config.Config) *ContentRepository {
-	return &ContentRepository{config: cfg}
+func NewContentRepository(contentPath string) *ContentRepository {
+	return &ContentRepository{contentPath: contentPath}
 }
 
 // Load loads content from the JSON file
 func (r *ContentRepository) Load() (*models.ContentData, error) {
 	// Check if the file exists
-	if _, err := os.Stat(r.config.ContentPath); os.IsNotExist(err) {
+	if _, err := os.Stat(r.contentPath); os.IsNotExist(err) {
 		// If file doesn't exist, return default content
 		defaultContent := r.getDefaultContent()
 		if saveErr := r.Save(defaultContent); saveErr != nil {
@@ -31,7 +30,7 @@ func (r *ContentRepository) Load() (*models.ContentData, error) {
 	}
 
 	// Read the file
-	data, err := os.ReadFile(r.config.ContentPath)
+	data, err := os.ReadFile(r.contentPath)
 	if err != nil {
 		return nil, err
 	}
@@ -52,7 +51,7 @@ func (r *ContentRepository) Save(content *models.ContentData) error {
 		return err
 	}
 
-	return os.WriteFile(r.config.ContentPath, data, 0644)
+	return os.WriteFile(r.contentPath, data, 0644)
 }
 
 // getDefaultContent returns the default content
