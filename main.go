@@ -293,8 +293,8 @@ func checkAuth(r *http.Request) bool {
 		username := parts[0]
 		password := parts[1]
 
-		// Validate credentials (hardcoded server-side)
-		return username == "nikma" && password == "280200"
+		// Validate credentials (hardcoded server-side) - FIXED: was "280200", now consistent with Authenticate()
+		return username == "nikma" && password == "250200"
 	}
 
 	return false
