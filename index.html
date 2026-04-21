@@ -202,7 +202,7 @@
       --teal-light: #14b8a6;
       --navy: #1e3a5f;
     }
-    
+
     ::-webkit-scrollbar {
       width: 10px;
     }
@@ -237,11 +237,25 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .reveal-delay-5 {
+      transition-delay: 0.5s;
+    }
 
     .hero-gradient {
       background: linear-gradient(135deg, #1e3a5f 0%, #0d9488 50%, #14b8a6 100%);
@@ -285,9 +299,17 @@
     }
 
     @keyframes gradient-shift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .animated-gradient {
@@ -296,10 +318,18 @@
       animation: gradient-shift 8s ease infinite;
     }
   </style>
-<noscript>
+  <noscript>
     <style>
-      .reveal { opacity: 1 !important; transform: none !important; }
-      html.no-js .reveal, .reveal.active { opacity: 1 !important; transform: none !important; }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      html.no-js .reveal,
+      .reveal.active {
+        opacity: 1 !important;
+        transform: none !important;
+      }
     </style>
   </noscript>
 </head>
@@ -322,7 +352,7 @@
           Nikma
         </h1>
       </div>
-      
+
       <ul class="hidden md:flex items-center gap-6">
         <li><a href="#beranda" class="text-navy hover:text-teal font-semibold transition-colors">Beranda</a></li>
         <li><a href="#tentang" class="text-navy hover:text-teal font-semibold transition-colors">Tentang</a></li>
@@ -332,14 +362,14 @@
         <li><a href="#faq" class="text-navy hover:text-teal font-semibold transition-colors">FAQ</a></li>
         <li><a href="#kontak" class="btn-primary text-sm py-2 px-5">Daftar</a></li>
       </ul>
-      
+
       <button id="mobile-menu-button" class="md:hidden text-navy p-2">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
     </div>
-    
+
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
       <ul class="flex flex-col p-4 gap-2">
@@ -355,63 +385,79 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="beranda" class="min-h-screen pt-24 hero-gradient text-white pattern-dots relative z-10">
+  <section id="beranda" class="min-h-screen pt-24 hero-gradient text-navy pattern-dots relative z-10">
     <div class="container mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
       <div class="md:w-1/2 space-y-6">
-        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold reveal">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <div
+          class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold reveal text-navy">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           Terbuka untuk SD & SMP
         </div>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight reveal reveal-delay-1">
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight reveal reveal-delay-1 text-navy">
           {{.Hero.Title}}
         </h1>
-        
-        <p class="text-xl md:text-2xl text-teal-light font-semibold reveal reveal-delay-2">
+
+        <p class="text-xl md:text-2xl text-teal-600 font-semibold reveal reveal-delay-2">
           {{.Hero.Subtitle}}
         </p>
-        
-        <p class="text-lg text-white/80 max-w-lg reveal reveal-delay-3">
+
+        <p class="text-lg text-gray-700 max-w-lg reveal reveal-delay-3">
           {{.Hero.Description}}
         </p>
-        
+
         <div class="flex flex-wrap gap-4 reveal reveal-delay-4">
           <a href="https://wa.me/{{.Hero.WhatsappNumber}}?text={{.Hero.WhatsappMessage}}" target="_blank"
-            class="btn-primary bg-white text-navy hover:bg-gray-100">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+            class="btn-primary bg-teal-600 text-white hover:bg-teal-700 shadow-lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z" />
+            </svg>
             Mulai Belajar Gratis
           </a>
-          <a href="#program" class="btn-secondary bg-transparent border-2 border-white hover:bg-white/20">
+          <a href="#program"
+            class="btn-secondary bg-teal-50 border-2 border-teal-600 text-teal-700 hover:bg-teal-100 font-semibold">
             Lihat Program
           </a>
         </div>
-        
+
         <div class="flex items-center gap-6 pt-4 reveal reveal-delay-5">
           <div class="flex -space-x-3">
-            <div class="w-10 h-10 rounded-full bg-teal-light border-2 border-white flex items-center justify-center text-sm font-bold">A</div>
-            <div class="w-10 h-10 rounded-full bg-navy border-2 border-white flex items-center justify-center text-sm font-bold text-white">B</div>
-            <div class="w-10 h-10 rounded-full bg-green-500 border-2 border-white flex items-center justify-center text-sm font-bold text-white">C+</div>
+            <div
+              class="w-10 h-10 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-sm font-bold text-white">
+              A
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-navy border-2 border-white flex items-center justify-center text-sm font-bold text-white">
+              B</div>
+            <div
+              class="w-10 h-10 rounded-full bg-green-500 border-2 border-white flex items-center justify-center text-sm font-bold text-white">
+              C+</div>
           </div>
           <div>
-            <p class="font-semibold">50+ Siswa aktif</p>
-            <p class="text-sm text-white/70">belajar setiap bulan</p>
+            <p class="font-semibold text-navy">50+ Siswa aktif</p>
+            <p class="text-sm text-gray-600">belajar setiap bulan</p>
           </div>
         </div>
       </div>
-      
+
       <div class="md:w-1/2 relative">
         <div class="relative z-10 reveal reveal-delay-2">
-          <img src="/assets/images/ilustrasi.png" alt="Belajar Bareng Nikma" 
+          <img src="/assets/images/ilustrasi.png" alt="Belajar Bareng Nikma"
             class="w-full max-w-md mx-auto floating-element" />
         </div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-teal/30 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-teal/30 rounded-full blur-3xl animate-pulse">
+        </div>
       </div>
     </div>
-    
+
     <!-- Wave Divider -->
     <div class="absolute bottom-0 left-0 right-0">
       <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 70C840 80 960 100 1080 105C1200 110 1320 110 1380 110L1440 120V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V120Z" fill="#fefcf6"/>
+        <path
+          d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 70C840 80 960 100 1080 105C1200 110 1320 110 1380 110L1440 120V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V120Z"
+          fill="#fefcf6" />
       </svg>
     </div>
   </section>
@@ -447,18 +493,17 @@
         <span class="text-teal font-semibold text-sm uppercase tracking-wider">Tentang Kami</span>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.About.Title}}</h2>
       </div>
-      
+
       <div class="flex flex-col md:flex-row items-center gap-10">
         <div class="md:w-1/3 reveal reveal-delay-1">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-br from-teal to-navy rounded-3xl transform rotate-3"></div>
             <div class="relative bg-white p-4 rounded-3xl shadow-xl">
-              <img src="/assets/images/nikma_2.png" alt="Kak Nikma" 
-                class="rounded-2xl w-full object-cover" />
+              <img src="/assets/images/nikma_2.png" alt="Kak Nikma" class="rounded-2xl w-full object-cover" />
             </div>
           </div>
         </div>
-        
+
         <div class="md:w-2/3 space-y-4">
           <div class="card-glass p-6 md:p-8 reveal reveal-delay-2">
             <p class="text-lg text-gray-700 leading-relaxed">
@@ -471,7 +516,7 @@
               {{.About.Description3}}
             </p>
           </div>
-          
+
           <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
             <div class="flex items-center gap-2 bg-mint px-4 py-2 rounded-full">
               <span class="text-teal">✓</span>
@@ -498,10 +543,12 @@
         <span class="text-teal font-semibold text-sm uppercase tracking-wider">Program Belajar</span>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Program.Title}}</h2>
       </div>
-      
+
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div class="card-glass p-8 card-hover reveal reveal-delay-1 relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-teal/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-teal/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500">
+          </div>
           <div class="relative z-10">
             <div class="feature-icon bg-gradient-to-br from-teal to-teal-light text-white mb-4">
               <span>📖</span>
@@ -511,7 +558,8 @@
             <ul class="space-y-2">
               {{range .Program.Sd.Features}}
               <li class="flex items-center gap-2 text-gray-700">
-                <span class="w-5 h-5 bg-teal/20 rounded-full flex items-center justify-center text-teal text-xs">✓</span>
+                <span
+                  class="w-5 h-5 bg-teal/20 rounded-full flex items-center justify-center text-teal text-xs">✓</span>
                 {{.}}
               </li>
               {{end}}
@@ -521,9 +569,11 @@
             </a>
           </div>
         </div>
-        
+
         <div class="card-glass p-8 card-hover reveal reveal-delay-2 relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-navy/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-navy/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500">
+          </div>
           <div class="relative z-10">
             <div class="feature-icon bg-gradient-to-br from-navy to-navy-dark text-white mb-4">
               <span>🔬</span>
@@ -533,7 +583,8 @@
             <ul class="space-y-2">
               {{range .Program.Smp.Features}}
               <li class="flex items-center gap-2 text-gray-700">
-                <span class="w-5 h-5 bg-navy/20 rounded-full flex items-center justify-center text-navy text-xs">✓</span>
+                <span
+                  class="w-5 h-5 bg-navy/20 rounded-full flex items-center justify-center text-navy text-xs">✓</span>
                 {{.}}
               </li>
               {{end}}
@@ -554,26 +605,26 @@
         <span class="text-teal-light font-semibold text-sm uppercase tracking-wider">Keunggulan</span>
         <h2 class="text-3xl md:text-4xl font-bold mt-2">Mengapa Pilih Nikma?</h2>
       </div>
-      
+
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-1">
           <div class="text-4xl mb-4">👨‍🏫</div>
           <h3 class="text-xl font-bold mb-2">Tutor Berpengalaman</h3>
           <p class="text-white/70 text-sm">Dipandu tutor的专业 dengan pengalaman 3+ tahun dalam dunia pendidikan</p>
         </div>
-        
+
         <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-2">
           <div class="text-4xl mb-4">💻</div>
           <h3 class="text-xl font-bold mb-2">Fleksibel Online/Offline</h3>
           <p class="text-white/70 text-sm">Belajar dari rumah atau tatap muka, sesuai kenyamanan kamu</p>
         </div>
-        
+
         <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-3">
           <div class="text-4xl mb-4">🎯</div>
           <h3 class="text-xl font-bold mb-2">Fokus T目标</h3>
           <p class="text-white/70 text-sm">Materi disesuaikan dengan kebutuhan dan level siswa</p>
         </div>
-        
+
         <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-4">
           <div class="text-4xl mb-4">📊</div>
           <h3 class="text-xl font-bold mb-2">Progress Ter Monitoring</h3>
@@ -591,14 +642,15 @@
         <span class="text-teal font-semibold text-sm uppercase tracking-wider">Galeri</span>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Gallery.Title}}</h2>
       </div>
-      
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {{range .Gallery.Items}}
         <div class="card-glass overflow-hidden card-hover reveal">
           <div class="relative h-48 bg-gray-100 overflow-hidden group">
-            <img src="{{.Image}}" alt="{{.Title}}" 
+            <img src="{{.Image}}" alt="{{.Title}}"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-navy/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div
+              class="absolute inset-0 bg-navy/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <span class="text-white text-2xl">+</span>
             </div>
           </div>
@@ -619,7 +671,7 @@
         <span class="text-teal font-semibold text-sm uppercase tracking-wider">Testimoni</span>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Testimonials.Title}}</h2>
       </div>
-      
+
       <div class="grid md:grid-cols-3 gap-6">
         {{range .Testimonials.Items}}
         <div class="card-glass p-6 card-hover reveal">
@@ -632,7 +684,8 @@
           </div>
           <p class="text-gray-700 italic mb-4">"{{.Text}}"</p>
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal to-navy flex items-center justify-center text-white font-bold">
+            <div
+              class="w-10 h-10 rounded-full bg-gradient-to-br from-teal to-navy flex items-center justify-center text-white font-bold">
               {{slice .Author 0 1}}
             </div>
             <div>
@@ -653,7 +706,7 @@
         <span class="text-teal font-semibold text-sm uppercase tracking-wider">FAQ</span>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">Pertanyaan Umum</h2>
       </div>
-      
+
       <div class="space-y-4">
         <div class="card-glass overflow-hidden reveal">
           <button class="accordion w-full p-5 text-left flex justify-between items-center">
@@ -663,10 +716,11 @@
             </svg>
           </button>
           <div class="accordion-content px-5 pb-0">
-            <p class="text-gray-600 pb-5">Biaya les dimulai dari Rp350.000/bulan dengan berbagai paket fleksibel. Silakan hubungi kami untuk info lebih lanjut tentang paket yang sesuai kebutuhan.</p>
+            <p class="text-gray-600 pb-5">Biaya les dimulai dari Rp350.000/bulan dengan berbagai paket fleksibel.
+              Silakan hubungi kami untuk info lebih lanjut tentang paket yang sesuai kebutuhan.</p>
           </div>
         </div>
-        
+
         <div class="card-glass overflow-hidden reveal reveal-delay-1">
           <button class="accordion w-full p-5 text-left flex justify-between items-center">
             <span class="font-semibold text-navy">Apakah bisa belajar online?</span>
@@ -675,10 +729,11 @@
             </svg>
           </button>
           <div class="accordion-content px-5 pb-0">
-            <p class="text-gray-600 pb-5">Tentu! Kami menyediakan layanan belajar online via Google Meetatau Zoom dengan kualitas yang sama seperti offline. Fleksibel sesuai kebutuhan.</p>
+            <p class="text-gray-600 pb-5">Tentu! Kami menyediakan layanan belajar online via Google Meetatau Zoom dengan
+              kualitas yang sama seperti offline. Fleksibel sesuai kebutuhan.</p>
           </div>
         </div>
-        
+
         <div class="card-glass overflow-hidden reveal reveal-delay-2">
           <button class="accordion w-full p-5 text-left flex justify-between items-center">
             <span class="font-semibold text-navy">Berapa lama satu sesi les?</span>
@@ -687,22 +742,24 @@
             </svg>
           </button>
           <div class="accordion-content px-5 pb-0">
-            <p class="text-gray-600 pb-5">Satu sesi les berlangsung 90 menit dengan nyaman. Waktu optimal untuk memahami materi tanpa lelah.</p>
+            <p class="text-gray-600 pb-5">Satu sesi les berlangsung 90 menit dengan nyaman. Waktu optimal untuk memahami
+              materi tanpa lelah.</p>
           </div>
         </div>
-        
+
         <div class="card-glass overflow-hidden reveal reveal-delay-3">
           <button class="accordion w-full p-5 text-left flex justify-between items-center">
-            <span class="font-semibold text-navy">Apakah ada sesi проба?</span>
+            <span class="font-semibold text-navy">Apakah ada sesi online?</span>
             <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="accordion-content px-5 pb-0">
-            <p class="text-gray-600 pb-5">Ya! Kami menyediakan sesi coba gratis 30 menit agar kamu bisa merasakan metode belajar kami sebelum memutuskan.</p>
+            <p class="text-gray-600 pb-5">Ya! Kami menyediakan sesi coba gratis 30 menit agar kamu bisa merasakan metode
+              belajar kami sebelum memutuskan.</p>
           </div>
         </div>
-        
+
         <div class="card-glass overflow-hidden reveal reveal-delay-4">
           <button class="accordion w-full p-5 text-left flex justify-between items-center">
             <span class="font-semibold text-navy">Di mana lokasi bimbel?</span>
@@ -711,7 +768,8 @@
             </svg>
           </button>
           <div class="accordion-content px-5 pb-0">
-            <p class="text-gray-600 pb-5">Kami berlokasi di Bunder, Banyuwangi. Selain itu, kami juga melayani les online untuk seluruh Indonesia.</p>
+            <p class="text-gray-600 pb-5">Kami berlokasi di Bunder, Banyuwangi. Selain itu, kami juga melayani les
+              online untuk seluruh Indonesia.</p>
           </div>
         </div>
       </div>
@@ -726,7 +784,7 @@
           <span class="text-teal-light font-semibold text-sm uppercase tracking-wider">Registrasi</span>
           <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">{{.Contact.Title}}</h2>
           <p class="text-xl text-white/80 mb-8">{{.Contact.Description}}</p>
-          
+
           <div class="space-y-4">
             <div class="flex items-center gap-4">
               <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">📍</div>
@@ -750,26 +808,29 @@
               </div>
             </div>
           </div>
-          
+
           <a href="https://wa.me/{{.Contact.WhatsappNumber}}?text={{.Contact.WhatsappMessage}}" target="_blank"
             class="btn-primary mt-8 bg-white text-navy hover:bg-gray-100">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z" />
+            </svg>
             {{.Contact.ButtonText}}
           </a>
         </div>
-        
+
         <div class="lg:w-1/2 w-full reveal reveal-delay-1">
           <div class="card-glass p-8 bg-white">
             <h3 class="text-xl font-bold text-navy mb-6">Isi Formulir Pendaftaran</h3>
             <form id="registration-form" class="space-y-4">
               <div>
                 <label class="block text-sm font-semibold text-navy mb-1">Nama Orang Tua/Wali</label>
-                <input type="text" required placeholder="Nama lengkap" 
+                <input type="text" required placeholder="Nama lengkap"
                   class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
               </div>
               <div>
                 <label class="block text-sm font-semibold text-navy mb-1">Nama Siswa</label>
-                <input type="text" required placeholder="Nama lengkap anak" 
+                <input type="text" required placeholder="Nama lengkap anak"
                   class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
               </div>
               <div class="grid grid-cols-2 gap-4">
@@ -801,7 +862,7 @@
               </div>
               <div>
                 <label class="block text-sm font-semibold text-navy mb-1">Nomor WhatsApp</label>
-                <input type="tel" required placeholder="08xxxxxxxxxx" 
+                <input type="tel" required placeholder="08xxxxxxxxxx"
                   class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
               </div>
               <div>
@@ -840,14 +901,26 @@
           {{.Footer.Text | html}}
         </div>
         <div class="flex gap-4">
-          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <a href="#"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
           </a>
-          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="#"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
           </a>
-          <a href="https://wa.me/6281234567890" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+          <a href="https://wa.me/6281234567890"
+            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -921,10 +994,10 @@
       button.addEventListener("click", () => {
         const content = button.nextElementSibling;
         const icon = button.querySelector(".accordion-icon");
-        
+
         content.classList.toggle("active");
         icon.classList.toggle("active");
-        
+
         document.querySelectorAll(".accordion-content").forEach((c) => {
           if (c !== content) {
             c.classList.remove("active");
@@ -934,13 +1007,13 @@
       });
     });
 
-    document.getElementById("registration-form").addEventListener("submit", function(e) {
+    document.getElementById("registration-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
-      
+
       const message = `Daftar Baru:%0A%0ANama Orang Tua: ${data[0]}%0ANama Siswa: ${data[1]}%0AKelas: ${data[2]} ${data[3]}%0AWhatsApp: ${data[4]}%0AMata Pelajaran: ${data[5]}%0APesan: ${data[6] || '-'}`;
-      
+
       window.open(`https://wa.me/{{.Contact.WhatsappNumber}}?text=${message}`, "_blank");
     });
   </script>
