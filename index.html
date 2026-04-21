@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Primary Meta Tags -->
   <title>{{.Hero.Title}} | Belajar Bareng Nikma</title>
   <meta name="title" content="{{.Hero.Title}} | Belajar Bareng Nikma" />
   <meta name="description" content="{{.Hero.Description}}" />
   <meta name="keywords"
-    content="bimbel matematika banyuwangi, bimbel ipa banyuwangi, les privat sd smp, bimbingan belajar bunder, guru fisika banyuwangi, les matematika online, bimbel terdekat, belajar bareng nikma" />
+    content="bimbel matematika banyuwangi, bimbel ipa banyuwangi, les privat sd smp, bimbangan belajar bunder, guru fisika banyuwangi, les matematika online, bimbel terdekat, belajar bareng nikma" />
   <meta name="author" content="Belajar Bareng Nikma" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="language" content="Indonesian" />
@@ -19,17 +18,14 @@
   <meta name="geo.placename" content="Banyuwangi" />
   <meta name="theme-color" content="#0a2f5a" />
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://nikma.my.id/" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nikma.my.id/" />
   <meta property="og:title" content="{{.Hero.Title}} | Belajar Bareng Nikma" />
@@ -39,7 +35,6 @@
   <meta property="og:locale" content="id_ID" />
   <meta property="og:site_name" content="Belajar Bareng Nikma" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://nikma.my.id/" />
   <meta name="twitter:title" content="{{.Hero.Title}} | Belajar Bareng Nikma" />
@@ -47,7 +42,6 @@
   <meta name="twitter:image" content="https://nikma.my.id/assets/images/og-image.jpg" />
   <meta name="twitter:image:alt" content="Belajar Bareng Nikma - Bimbel Matematika dan IPA" />
 
-  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,69 +72,79 @@
       "https://www.facebook.com/belajarbarengnikma",
       "https://www.instagram.com/belajarbarengnikma",
       "https://wa.me/6281234567890"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "category": "Educational",
-      "priceCurrency": "IDR",
-      "availability": "https://schema.org/InStock"
-    }
+    ]
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Program Bimbingan Matematika & IPA",
-    "description": "Bimbingan intensif Matematika dan IPA untuk siswa SD dan SMP",
-    "provider": {
-      "@type": "Person",
-      "name": "Kak Nikma",
-      "jobTitle": "Tutor Matematika & IPA",
-      "alumniOf": "Sarjana Fisika"
-    },
-    "educationalLevel": ["SD", "SMP"],
-    "courseMode": ["Onsite", "Online"],
-    "inLanguage": "id-ID"
-  }
-  </script>
-
-  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts (Poppins) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy: "#0a2f5a",
-            gold: "#D4AF37",
-            'gold-light': '#E5C156',
-            'navy-dark': '#072240',
+            navy: "#1e3a5f",
+            teal: "#0d9488",
+            "teal-light": "#14b8a6",
+            "teal-dark": "#0f766e",
+            mint: "#d1fae5",
+            cream: "#fefcf6",
+            "navy-dark": "#1a2d47",
           },
           fontFamily: {
-            poppins: ["Poppins", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+            nunito: ["Nunito", "sans-serif"],
           },
           animation: {
-            'float': 'float 3s ease-in-out infinite',
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            "float": "float 4s ease-in-out infinite",
+            "float-delayed": "float 4s ease-in-out 1s infinite",
+            "pulse-ring": "pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite",
+            "bounce-slow": "bounce-slow 3s ease-in-out infinite",
+            "wiggle": "wiggle 1s ease-in-out infinite",
+            "slide-up": "slide-up 0.6s ease-out forwards",
+            "fade-in": "fade-in 0.8s ease-out forwards",
+            "scale-in": "scale-in 0.5s ease-out forwards",
           },
           keyframes: {
             float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            }
-          }
+              "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+              "50%": { transform: "translateY(-15px) rotate(2deg)" },
+            },
+            "float-delayed": {
+              "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+              "50%": { transform: "translateY(-15px) rotate(-2deg)" },
+            },
+            "pulse-ring": {
+              "0%": { transform: "scale(0.8)", opacity: "1" },
+              "100%": { transform: "scale(1.4)", opacity: "0" },
+            },
+            "bounce-slow": {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-8px)" },
+            },
+            wiggle: {
+              "0%, 100%": { transform: "rotate(-3deg)" },
+              "50%": { transform: "rotate(3deg)" },
+            },
+            "slide-up": {
+              "0%": { transform: "translateY(40px)", opacity: "0" },
+              "100%": { transform: "translateY(0)", opacity: "1" },
+            },
+            "fade-in": {
+              "0%": { opacity: "0" },
+              "100%": { opacity: "1" },
+            },
+            "scale-in": {
+              "0%": { transform: "scale(0.9)", opacity: "0" },
+              "100%": { transform: "scale(1)", opacity: "1" },
+            },
+          },
         },
       },
     };
@@ -149,9 +153,9 @@
   <style type="text/tailwindcss">
     @layer base {
       body {
-        @apply font-poppins bg-gradient-to-b from-white via-gray-50 to-white overflow-x-hidden;
+        font-family: "Quicksand", sans-serif;
+        @apply bg-gradient-to-br from-cream via-white to-mint/30;
       }
-      
       html {
         scroll-behavior: smooth;
       }
@@ -159,15 +163,19 @@
     
     @layer components {
       .btn-primary {
-        @apply bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-gold text-navy font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg inline-flex items-center gap-2;
+        @apply bg-gradient-to-r from-teal to-teal-light hover:from-teal-dark hover:to-teal text-white font-bold py-3 px-7 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg inline-flex items-center gap-2;
       }
       
       .btn-secondary {
-        @apply bg-navy hover:bg-navy-dark text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg;
+        @apply bg-navy hover:bg-navy-dark text-white font-bold py-3 px-7 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg;
       }
       
       .section-padding {
-        @apply py-20 md:py-28;
+        @apply py-16 md:py-24;
+      }
+      
+      .card-glass {
+        @apply bg-white/80 backdrop-blur-lg rounded-3xl shadow-lg border border-white/50;
       }
       
       .card-hover {
@@ -175,39 +183,47 @@
       }
       
       .gradient-text {
-        @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent;
+        @apply bg-gradient-to-r from-teal to-navy bg-clip-text text-transparent;
       }
       
-      .glass-effect {
-        @apply bg-white/90 backdrop-blur-md;
+      .blob {
+        @apply absolute rounded-full blur-3xl opacity-30;
+      }
+      
+      .feature-icon {
+        @apply w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-md;
       }
     }
   </style>
 
   <style>
-    /* Custom scrollbar */
+    :root {
+      --teal: #0d9488;
+      --teal-light: #14b8a6;
+      --navy: #1e3a5f;
+    }
+    
     ::-webkit-scrollbar {
       width: 10px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: linear-gradient(to bottom, #fefcf6, #d1fae5);
     }
 
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(to bottom, #D4AF37, #0a2f5a);
+      background: linear-gradient(to bottom, #0d9488, #1e3a5f);
       border-radius: 5px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(to bottom, #E5C156, #072240);
+      background: linear-gradient(to bottom, #14b8a6, #1a2d47);
     }
 
-    /* Smooth reveal animation */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .reveal.active {
@@ -215,201 +231,367 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 {
-      transition-delay: 0.1s;
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d9488 50%, #14b8a6 100%);
     }
 
-    .reveal-delay-2 {
-      transition-delay: 0.2s;
+    .floating-element {
+      animation: float 4s ease-in-out infinite;
     }
 
-    .reveal-delay-3 {
-      transition-delay: 0.3s;
+    .floating-element-delayed {
+      animation: float-delayed 4s ease-in-out infinite;
     }
 
-    .reveal-delay-4 {
-      transition-delay: 0.4s;
+    .pattern-dots {
+      background-image: radial-gradient(circle, rgba(13, 148, 136, 0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
 
-    /* Hero pattern background */
-    .hero-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    .pattern-waves {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-8 12-20 15-30 15s-10-3-10-3v28h40s-2-22-10-40z' fill='%230d9488' fill-opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    .accordion-content {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .accordion-content.active {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-icon.active {
+      transform: rotate(180deg);
+    }
+
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-gradient {
+      background: linear-gradient(-45deg, #1e3a5f, #0d9488, #14b8a6, #1e3a5f);
+      background-size: 400% 400%;
+      animation: gradient-shift 8s ease infinite;
     }
   </style>
 </head>
 
-<body class="bg-gray-50">
-  <!-- Sticky Navigation Bar -->
-  <nav id="navbar"
-    class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
-    <div class="container mx-auto px-4 flex justify-between items-center py-4">
-      <div class="flex items-center">
+<body>
+  <!-- Animated Background Elements -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="blob bg-teal w-64 h-64 top-20 -left-16 animate-float"></div>
+    <div class="blob bg-navy w-96 h-96 bottom-10 -right-20 animate-float-delayed"></div>
+    <div class="blob bg-teal-light w-48 h-48 top-1/2 left-1/4 animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+    <div class="absolute inset-0 bg-white/90 backdrop-blur-lg shadow-md"></div>
+    <div class="relative container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="text-3xl">📚</span>
         <h1 class="text-navy font-bold text-xl md:text-2xl">
-          Belajar Bareng Nikma
+          Nikma
         </h1>
       </div>
-      <ul class="hidden md:flex space-x-8">
-        <li>
-          <a href="#beranda" class="text-navy hover:text-gold transition-colors">Beranda</a>
-        </li>
-        <li>
-          <a href="#tentang" class="text-navy hover:text-gold transition-colors">Tentang</a>
-        </li>
-        <li>
-          <a href="#program" class="text-navy hover:text-gold transition-colors">Program</a>
-        </li>
-        <li>
-          <a href="#galeri" class="text-navy hover:text-gold transition-colors">Galeri</a>
-        </li>
-        <li>
-          <a href="#testimoni" class="text-navy hover:text-gold transition-colors">Testimoni</a>
-        </li>
-        <li>
-          <a href="#kontak" class="text-navy hover:text-gold transition-colors">Kontak</a>
-        </li>
+      
+      <ul class="hidden md:flex items-center gap-6">
+        <li><a href="#beranda" class="text-navy hover:text-teal font-semibold transition-colors">Beranda</a></li>
+        <li><a href="#tentang" class="text-navy hover:text-teal font-semibold transition-colors">Tentang</a></li>
+        <li><a href="#program" class="text-navy hover:text-teal font-semibold transition-colors">Program</a></li>
+        <li><a href="#keunggulan" class="text-navy hover:text-teal font-semibold transition-colors">Keunggulan</a></li>
+        <li><a href="#testimoni" class="text-navy hover:text-teal font-semibold transition-colors">Testimoni</a></li>
+        <li><a href="#faq" class="text-navy hover:text-teal font-semibold transition-colors">FAQ</a></li>
+        <li><a href="#kontak" class="btn-primary text-sm py-2 px-5">Daftar</a></li>
       </ul>
-      <button id="mobile-menu-button" class="md:hidden text-navy focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      
+      <button id="mobile-menu-button" class="md:hidden text-navy p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
     </div>
+    
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4">
-      <ul class="flex flex-col space-y-3">
-        <li>
-          <a href="#beranda" class="block text-navy hover:text-gold py-2">Beranda</a>
-        </li>
-        <li>
-          <a href="#tentang" class="block text-navy hover:text-gold py-2">Tentang</a>
-        </li>
-        <li>
-          <a href="#program" class="block text-navy hover:text-gold py-2">Program</a>
-        </li>
-        <li>
-          <a href="#galeri" class="block text-navy hover:text-gold py-2">Galeri</a>
-        </li>
-        <li>
-          <a href="#testimoni" class="block text-navy hover:text-gold py-2">Testimoni</a>
-        </li>
-        <li>
-          <a href="#kontak" class="block text-navy hover:text-gold py-2">Kontak</a>
-        </li>
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+      <ul class="flex flex-col p-4 gap-2">
+        <li><a href="#beranda" class="block py-2 text-navy hover:text-teal font-semibold">Beranda</a></li>
+        <li><a href="#tentang" class="block py-2 text-navy hover:text-teal font-semibold">Tentang</a></li>
+        <li><a href="#program" class="block py-2 text-navy hover:text-teal font-semibold">Program</a></li>
+        <li><a href="#keunggulan" class="block py-2 text-navy hover:text-teal font-semibold">Keunggulan</a></li>
+        <li><a href="#testimoni" class="block py-2 text-navy hover:text-teal font-semibold">Testimoni</a></li>
+        <li><a href="#faq" class="block py-2 text-navy hover:text-teal font-semibold">FAQ</a></li>
+        <li><a href="#kontak" class="btn-primary text-center">Daftar Sekarang</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="beranda" class="section-fullscreen-hero pt-24 bg-gradient-to-r from-navy to-blue-900 text-white">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in-up">
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4 delay-100">
+  <section id="beranda" class="min-h-screen pt-24 hero-gradient text-white pattern-dots">
+    <div class="container mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold reveal">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Terbuka untuk SD & SMP
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight reveal reveal-delay-1">
           {{.Hero.Title}}
         </h1>
-        <p class="text-xl text-gold mb-6 delay-200">
+        
+        <p class="text-xl md:text-2xl text-teal-light font-semibold reveal reveal-delay-2">
           {{.Hero.Subtitle}}
         </p>
-        <p class="mb-8 max-w-lg delay-300">
+        
+        <p class="text-lg text-white/80 max-w-lg reveal reveal-delay-3">
           {{.Hero.Description}}
         </p>
-        <a href="https://wa.me/{{.Hero.WhatsappNumber}}?text={{.Hero.WhatsappMessage}}" target="_blank"
-          class="btn-primary inline-block text-navy delay-400">
-          Daftar Sekarang & Dapatkan Sesi Perkenalan Gratis
-        </a>
+        
+        <div class="flex flex-wrap gap-4 reveal reveal-delay-4">
+          <a href="https://wa.me/{{.Hero.WhatsappNumber}}?text={{.Hero.WhatsappMessage}}" target="_blank"
+            class="btn-primary bg-white text-navy hover:bg-gray-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+            Mulai Belajar Gratis
+          </a>
+          <a href="#program" class="btn-secondary bg-transparent border-2 border-white hover:bg-white/20">
+            Lihat Program
+          </a>
+        </div>
+        
+        <div class="flex items-center gap-6 pt-4 reveal reveal-delay-5">
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full bg-teal-light border-2 border-white flex items-center justify-center text-sm font-bold">A</div>
+            <div class="w-10 h-10 rounded-full bg-navy border-2 border-white flex items-center justify-center text-sm font-bold text-white">B</div>
+            <div class="w-10 h-10 rounded-full bg-green-500 border-2 border-white flex items-center justify-center text-sm font-bold text-white">C+</div>
+          </div>
+          <div>
+            <p class="font-semibold">50+ Siswa aktif</p>
+            <p class="text-sm text-white/70">belajar setiap bulan</p>
+          </div>
+        </div>
       </div>
-      <div class="md:w-1/2 flex justify-center animate-fade-in-up delay-500">
-        <!-- Placeholder Image -->
-        <div
-          class="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80 flex items-center justify-center text-navy">
-          <img src="/assets/images/ilustrasi.png" alt="Ilustrasi Belajar"
-            class="w-full h-full object-cover rounded-xl" />
+      
+      <div class="md:w-1/2 relative">
+        <div class="relative z-10 reveal reveal-delay-2">
+          <img src="/assets/images/ilustrasi.png" alt="Belajar Bareng Nikma" 
+            class="w-full max-w-md mx-auto floating-element" />
+        </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-teal/30 rounded-full blur-3xl animate-pulse"></div>
+      </div>
+    </div>
+    
+    <!-- Wave Divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 70C840 80 960 100 1080 105C1200 110 1320 110 1380 110L1440 120V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V120Z" fill="#fefcf6"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-cream py-10 relative z-10 shadow-lg shadow-navy/5">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center reveal">
+          <div class="text-3xl md:text-4xl font-bold gradient-text">50+</div>
+          <div class="text-gray-600 font-medium">Siswa Aktif</div>
+        </div>
+        <div class="text-center reveal reveal-delay-1">
+          <div class="text-3xl md:text-4xl font-bold gradient-text">100%</div>
+          <div class="text-gray-600 font-medium">Lulus Jadi Lebih Baik</div>
+        </div>
+        <div class="text-center reveal reveal-delay-2">
+          <div class="text-3xl md:text-4xl font-bold gradient-text">3</div>
+          <div class="text-gray-600 font-medium">Tahun Pengalaman</div>
+        </div>
+        <div class="text-center reveal reveal-delay-3">
+          <div class="text-3xl md:text-4xl font-bold gradient-text">Online</div>
+          <div class="text-gray-600 font-medium">& Offline</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="tentang" class="section-padding bg-white">
+  <section id="tentang" class="section-padding bg-cream relative">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12 animate-fade-in-up">
-        {{.About.Title}}
-      </h2>
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="md:w-1/3 flex justify-center animate-fade-in-up delay-100">
-          <!-- Placeholder Profile Image -->
-          <div
-            class="bg-gray-200 border-2 border-dashed rounded-full w-48 h-48 md:w-64 md:h-64 flex items-center justify-center text-navy">
-            <img src="/assets/images/nikma_2.png" alt="Foto Kak Nikma"
-              class="rounded-full w-full h-full object-cover" />
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal font-semibold text-sm uppercase tracking-wider">Tentang Kami</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.About.Title}}</h2>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/3 reveal reveal-delay-1">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal to-navy rounded-3xl transform rotate-3"></div>
+            <div class="relative bg-white p-4 rounded-3xl shadow-xl">
+              <img src="/assets/images/nikma_2.png" alt="Kak Nikma" 
+                class="rounded-2xl w-full object-cover" />
+            </div>
           </div>
         </div>
-        <div class="md:w-2/3 animate-fade-in-up delay-200">
-          <p class="text-lg mb-4">
-            {{.About.Description1 | html}}
-          </p>
-          <p class="text-lg mb-4">
-            {{.About.Description2}}
-          </p>
-          <p class="text-lg">
-            {{.About.Description3}}
-          </p>
+        
+        <div class="md:w-2/3 space-y-4">
+          <div class="card-glass p-6 md:p-8 reveal reveal-delay-2">
+            <p class="text-lg text-gray-700 leading-relaxed">
+              {{.About.Description1 | html}}
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4">
+              {{.About.Description2}}
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4">
+              {{.About.Description3}}
+            </p>
+          </div>
+          
+          <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+            <div class="flex items-center gap-2 bg-mint px-4 py-2 rounded-full">
+              <span class="text-teal">✓</span>
+              <span class="text-navy font-semibold">Sarjana Fisika</span>
+            </div>
+            <div class="flex items-center gap-2 bg-mint px-4 py-2 rounded-full">
+              <span class="text-teal">✓</span>
+              <span class="text-navy font-semibold">Pengalaman 3+ Tahun</span>
+            </div>
+            <div class="flex items-center gap-2 bg-mint px-4 py-2 rounded-full">
+              <span class="text-teal">✓</span>
+              <span class="text-navy font-semibold">Menyenangkan</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Programs Section -->
-  <section id="program" class="section-padding bg-gradient-to-br from-gray-50 to-white">
+  <section id="program" class="section-padding bg-white relative pattern-waves">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12 animate-fade-in-up">
-        {{.Program.Title}}
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Program SD -->
-        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-navy animate-fade-in-up delay-100">
-          <h3 class="text-2xl font-bold text-navy mb-4">
-            {{.Program.Sd.Title}}
-          </h3>
-          <p class="text-gray-700 mb-4">
-            {{.Program.Sd.Description}}
-          </p>
-          <ul class="list-disc pl-5 space-y-2 text-gray-700">
-            {{range .Program.Sd.Features}}
-            <li>{{.}}</li>
-            {{end}}
-          </ul>
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal font-semibold text-sm uppercase tracking-wider">Program Belajar</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Program.Title}}</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="card-glass p-8 card-hover reveal reveal-delay-1 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-teal/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="relative z-10">
+            <div class="feature-icon bg-gradient-to-br from-teal to-teal-light text-white mb-4">
+              <span>📖</span>
+            </div>
+            <h3 class="text-2xl font-bold text-navy mb-3">{{.Program.Sd.Title}}</h3>
+            <p class="text-gray-600 mb-4">{{.Program.Sd.Description}}</p>
+            <ul class="space-y-2">
+              {{range .Program.Sd.Features}}
+              <li class="flex items-center gap-2 text-gray-700">
+                <span class="w-5 h-5 bg-teal/20 rounded-full flex items-center justify-center text-teal text-xs">✓</span>
+                {{.}}
+              </li>
+              {{end}}
+            </ul>
+            <a href="#kontak" class="inline-block mt-6 text-teal font-semibold hover:underline">
+              Daftar SD &rarr;
+            </a>
+          </div>
         </div>
-        <!-- Program SMP -->
-        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-gold animate-fade-in-up delay-200">
-          <h3 class="text-2xl font-bold text-navy mb-4">
-            {{.Program.Smp.Title}}
-          </h3>
-          <p class="text-gray-700 mb-4">{{.Program.Smp.Description}}</p>
-          <ul class="list-disc pl-5 space-y-2 text-gray-700">
-            {{range .Program.Smp.Features}}
-            <li>{{.}}</li>
-            {{end}}
-          </ul>
+        
+        <div class="card-glass p-8 card-hover reveal reveal-delay-2 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-navy/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="relative z-10">
+            <div class="feature-icon bg-gradient-to-br from-navy to-navy-dark text-white mb-4">
+              <span>🔬</span>
+            </div>
+            <h3 class="text-2xl font-bold text-navy mb-3">{{.Program.Smp.Title}}</h3>
+            <p class="text-gray-600 mb-4">{{.Program.Smp.Description}}</p>
+            <ul class="space-y-2">
+              {{range .Program.Smp.Features}}
+              <li class="flex items-center gap-2 text-gray-700">
+                <span class="w-5 h-5 bg-navy/20 rounded-full flex items-center justify-center text-navy text-xs">✓</span>
+                {{.}}
+              </li>
+              {{end}}
+            </ul>
+            <a href="#kontak" class="inline-block mt-6 text-navy font-semibold hover:underline">
+              Daftar SMP &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  {{if .Gallery.Items}}
-  <!-- Gallery Section -->
-  <section id="galeri" class="section-padding bg-white">
+  <!-- Features/Keunggulan Section -->
+  <section id="keunggulan" class="section-padding bg-gradient-to-br from-navy to-navy-dark text-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12 animate-fade-in-up">
-        {{.Gallery.Title}}
-      </h2>
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal-light font-semibold text-sm uppercase tracking-wider">Keunggulan</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Mengapa Pilih Nikma?</h2>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-1">
+          <div class="text-4xl mb-4">👨‍🏫</div>
+          <h3 class="text-xl font-bold mb-2">Tutor Berpengalaman</h3>
+          <p class="text-white/70 text-sm">Dipandu tutor的专业 dengan pengalaman 3+ tahun dalam dunia pendidikan</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-2">
+          <div class="text-4xl mb-4">💻</div>
+          <h3 class="text-xl font-bold mb-2">Fleksibel Online/Offline</h3>
+          <p class="text-white/70 text-sm">Belajar dari rumah atau tatap muka, sesuai kenyamanan kamu</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-3">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold mb-2">Fokus T目标</h3>
+          <p class="text-white/70 text-sm">Materi disesuaikan dengan kebutuhan dan level siswa</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center card-hover reveal reveal-delay-4">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-2">Progress Ter Monitoring</h3>
+          <p class="text-white/70 text-sm">Orang tua bisa pantau perkembangan belajar anak</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  {{if .Gallery.Items}}
+  <section id="galeri" class="section-padding bg-cream">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal font-semibold text-sm uppercase tracking-wider">Galeri</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Gallery.Title}}</h2>
+      </div>
+      
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {{range .Gallery.Items}}
-        <div class="overflow-hidden rounded-xl shadow-lg animate-fade-in-up">
-          <div class="relative w-full h-48 bg-gray-200 overflow-hidden">
-            <img src="{{.Image}}" alt="{{.Title}}" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="card-glass overflow-hidden card-hover reveal">
+          <div class="relative h-48 bg-gray-100 overflow-hidden group">
+            <img src="{{.Image}}" alt="{{.Title}}" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-navy/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white text-2xl">+</span>
+            </div>
           </div>
-          <div class="p-4 bg-white">
-            <h3 class="font-bold text-sm text-navy">{{.Title}}</h3>
+          <div class="p-4">
+            <h3 class="font-bold text-navy">{{.Title}}</h3>
           </div>
         </div>
         {{end}}
@@ -418,55 +600,249 @@
   </section>
   {{end}}
 
-  <!-- Testimonial Section -->
-  <section id="testimoni" class="section-padding bg-navy text-white">
+  <!-- Testimonials Section -->
+  <section id="testimoni" class="section-padding bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-12 animate-fade-in-up">
-        {{.Testimonials.Title}}
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal font-semibold text-sm uppercase tracking-wider">Testimoni</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">{{.Testimonials.Title}}</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
         {{range .Testimonials.Items}}
-        <div class="bg-white bg-opacity-10 p-6 rounded-xl animate-fade-in-up">
-          <p class="italic mb-4">
-            "{{.Text}}"
-          </p>
-          <p class="font-semibold">- {{.Author}}</p>
+        <div class="card-glass p-6 card-hover reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">★</span>
+            <span class="text-gold">★</span>
+            <span class="text-gold">★</span>
+            <span class="text-gold">★</span>
+            <span class="text-gold">★</span>
+          </div>
+          <p class="text-gray-700 italic mb-4">"{{.Text}}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal to-navy flex items-center justify-center text-white font-bold">
+              {{slice .Author 0 1}}
+            </div>
+            <div>
+              <p class="font-bold text-navy">{{.Author}}</p>
+              <p class="text-sm text-gray-500">Siswa</p>
+            </div>
+          </div>
         </div>
         {{end}}
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="kontak" class="section-padding bg-white">
-    <div class="container mx-auto px-4 max-w-2xl text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6 animate-fade-in-up">
-        {{.Contact.Title}}
-      </h2>
-      <p class="text-xl text-gray-700 mb-8 animate-fade-in-up delay-100">
-        {{.Contact.Description}}
-      </p>
-      <div class="mb-8 animate-fade-in-up delay-200">
-        <p class="text-lg">
-          <span class="font-semibold">Layanan:</span> {{.Contact.ServiceArea}}
-        </p>
+  <!-- FAQ Section -->
+  <section id="faq" class="section-padding bg-cream">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal font-semibold text-sm uppercase tracking-wider">FAQ</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mt-2">Pertanyaan Umum</h2>
       </div>
-      <a href="https://wa.me/{{.Contact.WhatsappNumber}}?text={{.Contact.WhatsappMessage}}" target="_blank"
-        class="btn-primary inline-block animate-fade-in-up delay-300">
-        {{.Contact.ButtonText}}
-      </a>
+      
+      <div class="space-y-4">
+        <div class="card-glass overflow-hidden reveal">
+          <button class="accordion w-full p-5 text-left flex justify-between items-center">
+            <span class="font-semibold text-navy">Berapa biaya les per bulan?</span>
+            <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content px-5 pb-0">
+            <p class="text-gray-600 pb-5">Biaya les dimulai dari Rp350.000/bulan dengan berbagai paket fleksibel. Silakan hubungi kami untuk info lebih lanjut tentang paket yang sesuai kebutuhan.</p>
+          </div>
+        </div>
+        
+        <div class="card-glass overflow-hidden reveal reveal-delay-1">
+          <button class="accordion w-full p-5 text-left flex justify-between items-center">
+            <span class="font-semibold text-navy">Apakah bisa belajar online?</span>
+            <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content px-5 pb-0">
+            <p class="text-gray-600 pb-5">Tentu! Kami menyediakan layanan belajar online via Google Meetatau Zoom dengan kualitas yang sama seperti offline. Fleksibel sesuai kebutuhan.</p>
+          </div>
+        </div>
+        
+        <div class="card-glass overflow-hidden reveal reveal-delay-2">
+          <button class="accordion w-full p-5 text-left flex justify-between items-center">
+            <span class="font-semibold text-navy">Berapa lama satu sesi les?</span>
+            <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content px-5 pb-0">
+            <p class="text-gray-600 pb-5">Satu sesi les berlangsung 90 menit dengan nyaman. Waktu optimal untuk memahami materi tanpa lelah.</p>
+          </div>
+        </div>
+        
+        <div class="card-glass overflow-hidden reveal reveal-delay-3">
+          <button class="accordion w-full p-5 text-left flex justify-between items-center">
+            <span class="font-semibold text-navy">Apakah ada sesi проба?</span>
+            <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content px-5 pb-0">
+            <p class="text-gray-600 pb-5">Ya! Kami menyediakan sesi coba gratis 30 menit agar kamu bisa merasakan metode belajar kami sebelum memutuskan.</p>
+          </div>
+        </div>
+        
+        <div class="card-glass overflow-hidden reveal reveal-delay-4">
+          <button class="accordion w-full p-5 text-left flex justify-between items-center">
+            <span class="font-semibold text-navy">Di mana lokasi bimbel?</span>
+            <svg class="w-5 h-5 text-teal accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content px-5 pb-0">
+            <p class="text-gray-600 pb-5">Kami berlokasi di Bunder, Banyuwangi. Selain itu, kami juga melayani les online untuk seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section id="kontak" class="section-padding bg-navy text-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-10 items-center">
+        <div class="lg:w-1/2 reveal">
+          <span class="text-teal-light font-semibold text-sm uppercase tracking-wider">Registrasi</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">{{.Contact.Title}}</h2>
+          <p class="text-xl text-white/80 mb-8">{{.Contact.Description}}</p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">📍</div>
+              <div>
+                <p class="font-semibold">Lokasi</p>
+                <p class="text-white/70">{{.Contact.ServiceArea}}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">📱</div>
+              <div>
+                <p class="font-semibold">WhatsApp</p>
+                <p class="text-white/70">+62 812-3456-7890</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">🕐</div>
+              <div>
+                <p class="font-semibold">Jam Buka</p>
+                <p class="text-white/70">Senin - Minggu, 08.00 - 20.00</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/{{.Contact.WhatsappNumber}}?text={{.Contact.WhatsappMessage}}" target="_blank"
+            class="btn-primary mt-8 bg-white text-navy hover:bg-gray-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+            {{.Contact.ButtonText}}
+          </a>
+        </div>
+        
+        <div class="lg:w-1/2 w-full reveal reveal-delay-1">
+          <div class="card-glass p-8 bg-white">
+            <h3 class="text-xl font-bold text-navy mb-6">Isi Formulir Pendaftaran</h3>
+            <form id="registration-form" class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold text-navy mb-1">Nama Orang Tua/Wali</label>
+                <input type="text" required placeholder="Nama lengkap" 
+                  class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-navy mb-1">Nama Siswa</label>
+                <input type="text" required placeholder="Nama lengkap anak" 
+                  class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-navy mb-1">Tingkat Sekolah</label>
+                  <select required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent">
+                    <option value="">Pilih</option>
+                    <option value="sd">SD</option>
+                    <option value="smp">SMP</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-navy mb-1">Kelas</label>
+                  <select required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent">
+                    <option value="">Pilih</option>
+                    <option value="1">Kelas 1</option>
+                    <option value="2">Kelas 2</option>
+                    <option value="3">Kelas 3</option>
+                    <option value="4">Kelas 4</option>
+                    <option value="5">Kelas 5</option>
+                    <option value="6">Kelas 6</option>
+                    <option value="7">Kelas 7</option>
+                    <option value="8">Kelas 8</option>
+                    <option value="9">Kelas 9</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-navy mb-1">Nomor WhatsApp</label>
+                <input type="tel" required placeholder="08xxxxxxxxxx" 
+                  class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-navy mb-1">Mata Pelajaran yang Ingin Dibimbing</label>
+                <select required multiple
+                  class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent">
+                  <option value="matematika">Matematika</option>
+                  <option value="ipa">IPA</option>
+                  <option value="keduanya">Keduanya</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-navy mb-1">Pesan (Opsional)</label>
+                <textarea placeholder="Ceritakan kebutuhan belajar anak..." rows="3"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full justify-center">
+                Kirim Pendaftaran
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-navy text-white py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p>{{.Footer.Text | html}}</p>
+  <footer class="bg-navy-dark text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">📚</span>
+          <span class="font-bold text-xl">Belajar Bareng Nikma</span>
+        </div>
+        <div class="text-center text-white/70 text-sm">
+          {{.Footer.Text | html}}
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/6281234567890" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.173-.15.347-.347.52-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.213 4.526 4.628 1.194.694 2.256 1.285 2.854 1.56.2.09.457.09.642.09.198 0 .495-.1.712-.3.217-.297.793-1.05.873-1.229.08-.174-.025-.398.055-.577.075-.149.198-.297.297-.496.099-.198.05-.298.025-.496-.074-.149-.595-1.31-.815-1.775-.218-.457-.436-.874-.596-1.24-.159-.366-.266-.765-.266-1.191-.008-.397.048-1.178.348-1.556zm-4.472 6.618c-1.195 0-2.27-.404-3.095-1.145-.824-.74-1.42-1.684-1.42-2.75 0-1.472 1.156-2.67 2.58-2.67 1.424 0 2.57 1.198 2.57 2.67 0 .245-.05.482-.14.705-.095.223-.235.446-.43.665l-.01.01c-.197.196-.413.392-.627.589-.215.197-.476.393-.775.566.39.283.69.663.905 1.123.215.459.323.948.323 1.447 0 1.098-.894 1.99-1.995 1.99zm7.09-7.09c-.25-.25-.59-.39-.94-.39h-1.5c-.35 0-.69.14-.94.39-.25.25-.39.59-.39.94v1.5c0 .35.14.69.39.94.25.25.59.39.94.39h1.5c.35 0 .69-.14.94-.39.25-.25.39-.59.39-.94v-1.5c0-.35-.14-.69-.39-.94z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -474,16 +850,14 @@
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 70, // Offset tinggi navbar
+            top: targetElement.offsetTop - 70,
             behavior: "smooth",
           });
-          // Close mobile menu if open
           document.getElementById("mobile-menu").classList.add("hidden");
         }
       });
     });
 
-    // Sticky Navbar Effect
     window.addEventListener("scroll", () => {
       const navbar = document.getElementById("navbar");
       if (window.scrollY > 50) {
@@ -493,18 +867,15 @@
       }
     });
 
-    // Mobile Menu Toggle
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
-
     mobileMenuButton.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
 
-    // Intersection Observer for Scroll Animations
     const observerOptions = {
-      threshold: 0.1, // Mulai animasi ketika 10% elemen terlihat
-      rootMargin: "0px 0px -50px 0px", // Sedikit margin bawah
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -515,16 +886,41 @@
       });
     }, observerOptions);
 
-    // Mengamati elemen-elemen yang memiliki kelas animate-fade-in-up
-    document.querySelectorAll(".animate-fade-in-up").forEach((el) => {
+    document.querySelectorAll(".reveal").forEach((el) => {
       observer.observe(el);
     });
 
-    // Aktifkan animasi awal saat halaman dimuat
     window.addEventListener("load", () => {
-      document.querySelectorAll(".animate-fade-in-up").forEach((el) => {
+      document.querySelectorAll(".reveal").forEach((el) => {
         el.classList.add("active");
       });
+    });
+
+    document.querySelectorAll(".accordion").forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector(".accordion-icon");
+        
+        content.classList.toggle("active");
+        icon.classList.toggle("active");
+        
+        document.querySelectorAll(".accordion-content").forEach((c) => {
+          if (c !== content) {
+            c.classList.remove("active");
+            c.previousElementSibling.querySelector(".accordion-icon").classList.remove("active");
+          }
+        });
+      });
+    });
+
+    document.getElementById("registration-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      
+      const message = `Daftar Baru:%0A%0ANama Orang Tua: ${data[0]}%0ANama Siswa: ${data[1]}%0AKelas: ${data[2]} ${data[3]}%0AWhatsApp: ${data[4]}%0AMata Pelajaran: ${data[5]}%0APesan: ${data[6] || '-'}`;
+      
+      window.open(`https://wa.me/{{.Contact.WhatsappNumber}}?text=${message}`, "_blank");
     });
   </script>
 </body>
