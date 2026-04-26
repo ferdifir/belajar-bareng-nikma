@@ -7,6 +7,7 @@ type ContentData struct {
 	Program      ProgramSection      `json:"program"`
 	Gallery      GallerySection      `json:"gallery"`
 	Testimonials TestimonialsSection `json:"testimonials"`
+	Faq          FaqSection          `json:"faq"`
 	Contact      ContactSection      `json:"contact"`
 	Footer       FooterSection       `json:"footer"`
 }
@@ -66,12 +67,28 @@ type TestimonialItem struct {
 	Author string `json:"author"`
 }
 
+// FaqSection represents the FAQ section content
+type FaqSection struct {
+	Title string    `json:"title"`
+	Items []FaqItem `json:"items"`
+}
+
+// FaqItem represents a single FAQ item
+type FaqItem struct {
+	Question string `json:"question"`
+	Answer   string `json:"answer"`
+}
+
 // ContactSection represents the contact section content
 type ContactSection struct {
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	ServiceArea string `json:"serviceArea"`
-	ButtonText  string `json:"buttonText"`
+	Title            string `json:"title"`
+	Description      string `json:"description"`
+	ServiceArea      string `json:"serviceArea"`
+	WhatsappNumber   string `json:"whatsappNumber"`
+	WhatsappDisplay  string `json:"whatsappDisplay"`
+	WhatsappMessage  string `json:"whatsappMessage"`
+	OperationalHours string `json:"operationalHours"`
+	ButtonText       string `json:"buttonText"`
 }
 
 // FooterSection represents the footer content

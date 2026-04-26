@@ -54,10 +54,39 @@
       }
     ]
   },
+  "faq": {
+    "title": "Pertanyaan Umum",
+    "items": [
+      {
+        "question": "Berapa biaya les per bulan?",
+        "answer": "Biaya les dimulai dari Rp350.000/bulan dengan berbagai paket fleksibel. Silakan hubungi kami untuk info lebih lanjut tentang paket yang sesuai kebutuhan."
+      },
+      {
+        "question": "Apakah bisa belajar online?",
+        "answer": "Tentu! Kami menyediakan layanan belajar online via Google Meet atau Zoom dengan kualitas yang sama seperti offline. Fleksibel sesuai kebutuhan."
+      },
+      {
+        "question": "Berapa lama satu sesi les?",
+        "answer": "Satu sesi les berlangsung 90 menit dengan nyaman. Waktu optimal untuk memahami materi tanpa lelah."
+      },
+      {
+        "question": "Apakah ada sesi coba gratis?",
+        "answer": "Ya! Kami menyediakan sesi coba gratis 30 menit agar kamu bisa merasakan metode belajar kami sebelum memutuskan."
+      },
+      {
+        "question": "Di mana lokasi bimbel?",
+        "answer": "Kami berlokasi di Bunder, Banyuwangi. Selain itu, kami juga melayani les online untuk seluruh Indonesia."
+      }
+    ]
+  },
   "contact": {
     "title": "Hubungi Kami",
     "description": "Siap memulai perjalanan belajar yang menyenangkan dan efektif? Hubungi kami melalui WhatsApp!",
     "serviceArea": "Online dan Tatap Muka Area Bunder, Banyuwangi",
+    "whatsappNumber": "6281234567890",
+    "whatsappDisplay": "+62 812-3456-7890",
+    "whatsappMessage": "Halo Kak Nikma, saya tertarik dengan bimbel Belajar Bareng Nikma. Saya ingin mendaftar.",
+    "operationalHours": "Senin - Minggu, 08.00 - 20.00",
     "buttonText": "Hubungi via WhatsApp"
   },
   "footer": {
